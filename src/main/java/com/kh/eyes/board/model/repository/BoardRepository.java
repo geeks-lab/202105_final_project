@@ -15,18 +15,18 @@ public interface BoardRepository {
 	
 	List<Board> selectBoardList(Paging paging);
 	
-	@Select("select count(*) from tb_board")
+	@Select("select count(*) from user_suggest")
 	int selectContentCnt();
 	
-	@Insert("insert into tb_board(bd_idx,title,user_id,content)"
-			+ " values('b'||sc_board_idx.nextval,#{title},#{userId},#{content})")
+	@Insert("insert into user_suggest(sug_idx, sug_title, sug_content, sug_is_del, user_id)"
+			+ " values('b'||sc_sug_idx.nextval,#{sugTitle},#{sugContent},#{sugIsDel},#{userId})")
 	int insertBoard(Board board);
 	
 	int insertFile(FileVo fileVo);
 	
-	@Select("select * from tb_board where bd_idx = #{bd_idx}")
-	Board selectBoardWithBdIdx(String bdIdx);
+	@Select("select * from user_suggest where sug_idx = #{sug_idx}")
+	Board selectBoardWithSugIdx(String sugIdx);
 	
-	@Select("select * from tb_file where type_idx = #{bd_idx}")
-	List<FileVo> selectFileWithBdIdx(String bdIdx);
+	@Select("select * from file where f_type_idx = #{sug_idx}")
+	List<FileVo> selectFileWithSugIdx(String sugIdx);
 }

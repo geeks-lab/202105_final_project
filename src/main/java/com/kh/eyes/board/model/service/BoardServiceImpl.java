@@ -35,7 +35,7 @@ public class BoardServiceImpl implements BoardService{
 				.cntPerPage(10)
 				.type("board")
 				.total(boardRepository.selectContentCnt())
-				.sort("bd_idx")
+				.sort("sug_idx")
 				.direction("desc")
 				.build();
 		
@@ -65,10 +65,10 @@ public class BoardServiceImpl implements BoardService{
 	}
 
 	@Override
-	public Map<String, Object> selectBoardDetail(String bdIdx) {
+	public Map<String, Object> selectBoardDetail(String sugIdx) {
 		
-		Board board = boardRepository.selectBoardWithBdIdx(bdIdx);
-		List<FileVo> files = boardRepository.selectFileWithBdIdx(bdIdx);
+		Board board = boardRepository.selectBoardWithSugIdx(sugIdx);
+		List<FileVo> files = boardRepository.selectFileWithSugIdx(sugIdx);
 		
 		Map<String,Object> commandMap = new HashMap<String,Object>();
 		commandMap.put("board", board);

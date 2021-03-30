@@ -25,8 +25,8 @@ public class BoardRepositoryTest {
 	@Test
 	public void insertBoardTest() {
 		Board board = new Board();
-		board.setTitle("더미데이터");
-		board.setContent("더미데이터입력");
+		board.setSugTitle("더미데이터");
+		board.setSugContent("더미데이터입력");
 		board.setUserId("tester");
 		
 		for (int i = 0; i < 107; i++) {

@@ -7,79 +7,77 @@ import com.kh.eyes.common.code.Code;
 public class FileVo {
 	
 	private int fInx;
-	private String typeIdx;
-	private String originFileName;
-	private String renameFileName;
-	private String savePath;
-	private Date regDate;
-	private int isDel;
+	private String fTypeIdx;
+	private String fOriginName;
+	private String fReName;
+	private String fSavePath;
+	private Date fRegDate;
+	private int fIsDel;
 	
 	public String getFullPath() {
-		return Code.UPLOAD + savePath;
+		return Code.UPLOAD + fSavePath;
 	}
-	
+
 	public int getfInx() {
 		return fInx;
 	}
-	
+
 	public void setfInx(int fInx) {
 		this.fInx = fInx;
 	}
-	
-	public String getTypeIdx() {
-		return typeIdx;
+
+	public String getfTypeIdx() {
+		return fTypeIdx;
 	}
-	
-	public void setTypeIdx(String typeIdx) {
-		this.typeIdx = typeIdx;
+
+	public void setfTypeIdx(String fTypeIdx) {
+		this.fTypeIdx = fTypeIdx;
 	}
-	
-	public String getOriginFileName() {
-		return originFileName;
+
+	public String getfOriginName() {
+		return fOriginName;
 	}
-	
-	public void setOriginFileName(String originFileName) {
-		this.originFileName = originFileName;
+
+	public void setfOriginName(String fOriginName) {
+		this.fOriginName = fOriginName;
 	}
-	
-	public String getRenameFileName() {
-		return renameFileName;
+
+	public String getfReName() {
+		return fReName;
 	}
-	
-	public void setRenameFileName(String renameFileName) {
-		this.renameFileName = renameFileName;
+
+	public void setfReName(String fReName) {
+		this.fReName = fReName;
 	}
-	
-	public String getSavePath() {
-		return savePath;
+
+	public String getfSavePath() {
+		return fSavePath;
 	}
-	
-	public void setSavePath(String savePath) {
-		this.savePath = savePath;
+
+	public void setfSavePath(String fSavePath) {
+		this.fSavePath = fSavePath;
 	}
-	
-	public Date getRegDate() {
-		return regDate;
+
+	public Date getfRegDate() {
+		return fRegDate;
 	}
-	
-	public void setRegDate(Date regDate) {
-		this.regDate = regDate;
+
+	public void setfRegDate(Date fRegDate) {
+		this.fRegDate = fRegDate;
 	}
-	
-	public int getIsDel() {
-		return isDel;
+
+	public int getfIsDel() {
+		return fIsDel;
 	}
-	
-	public void setIsDel(int isDel) {
-		this.isDel = isDel;
+
+	public void setfIsDel(int fIsDel) {
+		this.fIsDel = fIsDel;
 	}
-	
+
 	@Override
 	public String toString() {
-		return "FileVo [fInx=" + fInx + ", typeIdx=" + typeIdx + ", originFileName=" + originFileName
-				+ ", renameFileName=" + renameFileName + ", savePath=" + savePath + ", regDate=" + regDate + ", isDel="
-				+ isDel + "]";
+		return "FileVo [fInx=" + fInx + ", fTypeIdx=" + fTypeIdx + ", fOriginName=" + fOriginName + ", fReName="
+				+ fReName + ", fSavePath=" + fSavePath + ", fRegDate=" + fRegDate + ", fIsDel=" + fIsDel + "]";
 	}
-	
 	
 }

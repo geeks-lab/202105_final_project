@@ -13,5 +13,5 @@ public interface BoardService {
 	
 	void insertBoard(Board board, List<MultipartFile> files);
 	
-	Map<String,Object> selectBoardDetail(String bdIdx);
+	Map<String,Object> selectBoardDetail(String sugIdx);
 }

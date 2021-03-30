@@ -4,19 +4,51 @@ import java.sql.Date;
 
 public class Board {
 	
-	private String bdIdx;
+	private String sugIdx;
+	private String sugTitle;
+	private String sugContent;
+	private Date sugRegDate;
+	private int sugIsDel;
 	private String userId;
-	private Date regDate;
-	private String title;
-	private String content;
-	private int isDel;
 	
-	public String getBdIdx() {
-		return bdIdx;
+	public String getSugIdx() {
+		return sugIdx;
 	}
 	
-	public void setBdIdx(String bdIdx) {
-		this.bdIdx = bdIdx;
+	public void setSugIdx(String sugIdx) {
+		this.sugIdx = sugIdx;
+	}
+	
+	public String getSugTitle() {
+		return sugTitle;
+	}
+	
+	public void setSugTitle(String sugTitle) {
+		this.sugTitle = sugTitle;
+	}
+	
+	public String getSugContent() {
+		return sugContent;
+	}
+	
+	public void setSugContent(String sugContent) {
+		this.sugContent = sugContent;
+	}
+	
+	public Date getSugRegDate() {
+		return sugRegDate;
+	}
+	
+	public void setSugRegDate(Date sugRegDate) {
+		this.sugRegDate = sugRegDate;
+	}
+	
+	public int getSugIsDel() {
+		return sugIsDel;
+	}
+	
+	public void setSugIsDel(int sugIsDel) {
+		this.sugIsDel = sugIsDel;
 	}
 	
 	public String getUserId() {
@@ -27,43 +59,10 @@ public class Board {
 		this.userId = userId;
 	}
 	
-	public Date getRegDate() {
-		return regDate;
-	}
-	
-	public void setRegDate(Date regDate) {
-		this.regDate = regDate;
-	}
-	
-	public String getTitle() {
-		return title;
-	}
-	
-	public void setTitle(String title) {
-		this.title = title;
-	}
-	
-	public String getContent() {
-		return content;
-	}
-	
-	public void setContent(String content) {
-		this.content = content;
-	}
-	
-	public int getIsDel() {
-		return isDel;
-	}
-	
-	public void setIsDel(int isDel) {
-		this.isDel = isDel;
-	}
-	
 	@Override
 	public String toString() {
-		return "Board [bdIdx=" + bdIdx + ", userId=" + userId + ", regDate=" + regDate + ", title=" + title
-				+ ", content=" + content + ", isDel=" + isDel + "]";
+		return "Board [sugIdx=" + sugIdx + ", sugTitle=" + sugTitle + ", sugContent=" + sugContent + ", sugRegDate="
+				+ sugRegDate + ", sugIsDel=" + sugIsDel + ", userId=" + userId + "]";
 	}
-	
 	
 }

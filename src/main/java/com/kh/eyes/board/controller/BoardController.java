@@ -46,11 +46,11 @@ public class BoardController {
 	@PostMapping("upload")
 	public String uploadBoard(
 			@RequestParam List<MultipartFile> files
-			,@SessionAttribute(name = "userInfo", required = false) User member
+			,@SessionAttribute(name = "userInfo", required = false) User user
 			,Board board) {
 		
 		//로그인 여부에 따른 예외처리
-		String userId = member == null?"guest":member.getUserId();
+		String userId = user == null?"guest":user.getUserId();
 		board.setUserId(userId);
 		
 		boardService.insertBoard(board, files);
@@ -59,8 +59,8 @@ public class BoardController {
 	}
 	
 	@GetMapping("detail")
-	public String boardDetail(String bdIdx, Model model) {
-		model.addAllAttributes(boardService.selectBoardDetail(bdIdx));
+	public String boardDetail(String sugIdx, Model model) {
+		model.addAllAttributes(boardService.selectBoardDetail(sugIdx));
 		return "board/boardView";
 	}
 	
@@ -70,13 +70,13 @@ public class BoardController {
 		HttpHeaders headers = new HttpHeaders();
 		headers.setContentDisposition(ContentDisposition
 						.builder("attachment")
-						.filename(file.getOriginFileName(), Charset.forName("utf-8"))
+						.filename(file.getfOriginName(), Charset.forName("utf-8"))
 						.build());
 		
 		FileSystemResource resource = new FileSystemResource(
 				FileSystems
 				.getDefault()
-				.getPath(file.getFullPath(), file.getRenameFileName()));
+				.getPath(file.getFullPath(), file.getfReName()));
 		
 		return ResponseEntity.ok().headers(headers).body(resource);
 	}

@@ -17,15 +17,15 @@ public class FileUtil {
 		List<FileVo> fileList = new ArrayList<FileVo>();
 		
 		//파일 저장 경로
-		String savePath = getSavePath();
+		String savePath = getfSavePath();
 		
 		if(files.size() >= 1 && !files.get(0).getOriginalFilename().equals("")) {
 			for (MultipartFile multipartFile : files) {
 				//저장될 파일명
 				FileVo fileVo = new FileVo();
-				fileVo.setOriginFileName(multipartFile.getOriginalFilename());
-				fileVo.setRenameFileName(UUID.randomUUID().toString());
-				fileVo.setSavePath(savePath);
+				fileVo.setfOriginName(multipartFile.getOriginalFilename());
+				fileVo.setfReName(UUID.randomUUID().toString());
+				fileVo.setfSavePath(savePath);
 				
 				fileList.add(fileVo);
 				saveFile(fileVo, multipartFile);
@@ -34,7 +34,7 @@ public class FileUtil {
 		return fileList;
 	}
 	
-	private String getSavePath() {
+	private String getfSavePath() {
 		Calendar cal = Calendar.getInstance();
 		return cal.get(Calendar.YEAR) + "/"
 				+ (cal.get(Calendar.MONTH) + 1) + "/"
@@ -42,7 +42,7 @@ public class FileUtil {
 	}
 	
 	private void saveFile(FileVo fileVo, MultipartFile multipartFile) throws IllegalStateException, IOException {
-		File dest = new File(fileVo.getFullPath() + fileVo.getRenameFileName());
+		File dest = new File(fileVo.getFullPath() + fileVo.getfReName());
 		if(!dest.exists()) {
 			new File(fileVo.getFullPath()).mkdirs();
 		}

@@ -31,10 +31,10 @@
 	       <tbody>
 	       <c:forEach items="${boardList}" var="board">
 	           <tr>
-	               <td>${board.bdIdx}</td>
-	               <td><a href="${context}/board/detail?bdIdx=${board.bdIdx}">${board.title}</a></td>
+	               <td>${board.sugIdx}</td>
+	               <td><a href="${context}/board/detail?sugIdx=${board.sugIdx}">${board.sugTitle}</a></td>
 	               <td>${board.userId}</td>
-	               <td>${board.regDate}</td>
+	               <td>${board.sugRegDate}</td>
 	           </tr>
 	        </c:forEach>
 	       </tbody>

@@ -7,22 +7,22 @@
     <h2 class="tit">*게시판</h2>
     <div class="desc_board">
       <div class="info" >
-          <span>번호 : ${board.bdIdx}</span>
-          <span>제목 : ${board.title}</span>
-          <span>등록일 : ${board.regDate}</span>
+          <span>번호 : ${board.sugIdx}</span>
+          <span>제목 : ${board.sugTitle}</span>
+          <span>등록일 : ${board.sugRegDate}</span>
           <span>작성자 : ${board.userId}</span>
       </div>
       <div class="info file_info">
       	<ol>
       	<c:forEach var="file" items="${files}">
-      		<li	onclick="downloadFile('${file.originFileName}','${file.renameFileName}','${file.savePath}')">  
+      		<li	onclick="downloadFile('${file.fOriginName}','${file.fReName}','${file.fSavePath}')">  
       	 		<a>${file.originFileName}</a> 
       	 	</li>	     
       	</c:forEach>
       	</ol>
       </div>
       <div class="article_content">
-      	<pre>${board.content}</pre>
+      	<pre>${board.sugContent}</pre>
       </div>
       <div class="btn_section">
           <button onclick="submitData('list')"><span>목록</span></button>
@@ -37,9 +37,9 @@
    } 
    
    function downloadFile(ofname,rfname,savePath){
-	  let params = {'originFileName':ofname,
-			  		'renameFileName':rfname,
-			  		'savePath':savePath};
+	  let params = {'fOriginName':ofname,
+			  		'fReName':rfname,
+			  		'fSavePath':savePath};
 	  
       location.href = '${context}' + "/board/download?" + urlEncodedForm(params);
    }
