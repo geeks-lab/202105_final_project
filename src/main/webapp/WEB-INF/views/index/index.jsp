@@ -39,7 +39,7 @@
 							<li><a href="index.html">Home</a></li>
 							<li><a href="generic.html">TESTACCOUNT</a></li>
 							<li><a href="generic.html">JIYOUNGTEST222</a></li>
-							<li><a href="generic.html">JIHYEONTEST</a></li>
+							<li><a href="generic.html">JIHYEONTEST222</a></li>
 							<li><a href="generic.html">Consequat dolor</a></li>
 							<li><a href="elements.html">Elements</a></li>
 						</ul>
