@@ -44,5 +44,9 @@
 	height: 20vh !important;
 }
 
+.icons>li>a{
+	width: 80vw !important;
+}
+
 
 
