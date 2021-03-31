@@ -50,7 +50,7 @@ import com.kh.eyes.user.validator.MemberValidator;
 //	HttpEntity, RequestEntity, ResponseEntity
 
 @Controller
-@RequestMapping("member")
+@RequestMapping("user")
 public class UserController {
 	
 	Logger logger = LoggerFactory.getLogger(this.getClass());
