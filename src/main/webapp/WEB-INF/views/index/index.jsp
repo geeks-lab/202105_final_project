@@ -1,8 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
    pageEncoding="UTF-8"%>
 <%@ include file="/WEB-INF/views/include/head.jsp" %>
-
-<!DOCTYPE HTML>
+<head>
+<link rel="stylesheet" href="/resources/css/index.css" />
+</head>
 <!--
 	Phantom by HTML5 UP
 	html5up.net | @ajlkn
@@ -19,7 +20,7 @@
 
 							<!-- Logo -->
 								<a href="index.html" class="logo">
-									<span class="symbol"><img src="resources/images/logo.svg" alt="" /></span><span class="title">Phantom</span>
+									<span class="symbol"><img src="resources/images/logo.svg" alt="" /></span><span class="title">눈, 보라</span>
 								</a>
 
 							<!-- Nav -->
@@ -53,9 +54,7 @@
 					<div id="main">
 						<div class="inner">
 							<header>
-								<h1>This is Phantom, a free, fully responsive site<br />
-								template designed by <a href="http://html5up.net">HTML5 UP</a>.</h1>
-								<p>Etiam quis viverra lorem, in semper lorem. Sed nisl arcu euismod sit amet nisi euismod sed cursus arcu elementum ipsum arcu vivamus quis venenatis orci lorem ipsum et magna feugiat veroeros aliquam. Lorem ipsum dolor sit amet nullam dolore.</p>
+								<h3>불편한 당신의 눈을 대신해드립니다</h3>
 							</header>
 							<section class="tiles">
 								<article class="style1">
@@ -63,9 +62,9 @@
 										<img src="resources/images/pic01.jpg" alt="" />
 									</span>
 									<a href="generic.html">
-										<h2>Magna</h2>
+										<h2>1. 식음료 찾기</h2>
 										<div class="content">
-											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
+											<p>음료수, 과자, 라면 등의 식품을 인식시켜주시면 어떤 제품인지 말해드립니다.</p>
 										</div>
 									</a>
 								</article>
@@ -74,9 +73,9 @@
 										<img src="resources/images/pic02.jpg" alt="" />
 									</span>
 									<a href="generic.html">
-										<h2>Lorem</h2>
+										<h2>2. 생필품 찾기</h2>
 										<div class="content">
-											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
+											<p>칫솔, 생리용품 등의 생필품을 인식시켜주시면 어떤 제품인지 말해드립니다.</p>
 										</div>
 									</a>
 								</article>
@@ -85,9 +84,9 @@
 										<img src="resources/images/pic03.jpg" alt="" />
 									</span>
 									<a href="generic.html">
-										<h2>Feugiat</h2>
+										<h2>3. 목소리 되어주기</h2>
 										<div class="content">
-											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
+											<p>원하는 말을 적어주세요. 대신 말해드립니다.</p>
 										</div>
 									</a>
 								</article>
@@ -96,9 +95,9 @@
 										<img src="resources/images/pic04.jpg" alt="" />
 									</span>
 									<a href="generic.html">
-										<h2>Tempus</h2>
+										<h2>4.  이용 안내</h2>
 										<div class="content">
-											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
+											<p>어떻게 이용해야 하는지 상세히 알려드립니다.</p>
 										</div>
 									</a>
 								</article>
@@ -107,13 +106,13 @@
 										<img src="resources/images/pic05.jpg" alt="" />
 									</span>
 									<a href="generic.html">
-										<h2>Aliquam</h2>
+										<h2>5. 고객의 소리함</h2>
 										<div class="content">
-											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
+											<p>불편한 사항 및 개선이 필요한 부분이 있다면 귀기울여 듣겠습니다.</p>
 										</div>
 									</a>
 								</article>
-								<article class="style6">
+								<!-- <article class="style6">
 									<span class="image">
 										<img src="resources/images/pic06.jpg" alt="" />
 									</span>
@@ -179,6 +178,7 @@
 										</div>
 									</a>
 								</article>
+								
 								<article class="style4">
 									<span class="image">
 										<img src="resources/images/pic12.jpg" alt="" />
@@ -190,6 +190,7 @@
 										</div>
 									</a>
 								</article>
+								 -->
 							</section>
 						</div>
 					</div>
@@ -219,12 +220,8 @@
 							<section>
 								<h2>Follow</h2>
 								<ul class="icons">
-									<li><a href="#" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="#" class="icon brands style2 fa-facebook-f"><span class="label">Facebook</span></a></li>
 									<li><a href="#" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li>
-									<li><a href="#" class="icon brands style2 fa-dribbble"><span class="label">Dribbble</span></a></li>
 									<li><a href="#" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
-									<li><a href="#" class="icon brands style2 fa-500px"><span class="label">500px</span></a></li>
 									<li><a href="#" class="icon solid style2 fa-phone"><span class="label">Phone</span></a></li>
 									<li><a href="#" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
 								</ul>

@@ -1,4 +1,48 @@
 @charset "UTF-8";
-body{
-	color: red;
+
+#header{
+	padding: 2em 0 0.1em 0;
 }
+
+.style1{
+	width: 35vw !important;
+}
+
+.style1>span{
+	height: 35vh !important;
+}
+
+.style2{
+	width: 35vw !important;
+}
+
+.style2>span{
+	height: 35vh !important;
+}
+
+.style3{
+	width: 73vw !important;
+}
+
+.style3>span{
+	height: 20vh !important;
+}
+
+.style4{
+	width: 73vw !important;
+}
+
+.style4>span{
+	height: 20vh !important;
+}
+
+.style5{
+	width: 73vw !important;
+}
+
+.style5>span{
+	height: 20vh !important;
+}
+
+
+
