@@ -50,7 +50,7 @@ import com.kh.eyes.user.validator.MemberValidator;
 //	HttpEntity, RequestEntity, ResponseEntity
 
 @Controller
-@RequestMapping("member")
+@RequestMapping("user")
 public class UserController {
 	
 	Logger logger = LoggerFactory.getLogger(this.getClass());
@@ -76,8 +76,15 @@ public class UserController {
 	//2. view 경로를 반환
 	//3. 아무것도 반환하지 않을 경우, 요청 url을 view 경로로 지정
 	
+	/*
+	 * @GetMapping("join")
+	 * public void member() {};
+	 */
+	
 	@GetMapping("join")
-	public void member() {};
+	public String boardForm() {
+		return "user/join";
+	}
 	
 	@GetMapping("idcheck")
 	@ResponseBody
@@ -133,7 +140,13 @@ public class UserController {
 	}
 	
 	@GetMapping("login")
-	public void login() {};
+	public String login() {
+		return "user/login";
+	}
+	
+	
+	
+	
 	
 	@PostMapping("loginimpl")
 	@ResponseBody

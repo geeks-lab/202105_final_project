@@ -1,0 +1,81 @@
+@charset "UTF-8";
+
+h2{
+	
+}
+
+.content{
+    width: 75%;
+	height: 100%;
+    background: #fff;
+    margin: 4rem auto;
+    padding: 60px;
+	
+    
+}
+
+.titleBox{
+	
+}
+
+/* 
+border-top: 1px solid #d8dce3;
+background-color: gray;
+	opacity: 0.05;
+
+*/
+
+.formBox{
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	
+}
+
+.form{
+	width: 80%;
+}
+
+.formBox>form{
+	width: 80%;
+	color: black;
+	font-size: 1em;
+	padding: 3.2em;
+}
+
+
+
+.label{
+	font-size: 1em;
+	display: flex;
+	text-align: center;
+    
+}
+
+.idWrap{
+	display: flex;
+	
+}
+
+.formId{
+	width: 100%;
+}
+
+.idCheck{
+	display: flex;
+	width: 100%;
+	display: grid;
+}
+.submit{
+	display:flex;
+	width: 100%;
+	flex:auto;
+	display: grid;
+}
+
+
+
+
+
+
+
