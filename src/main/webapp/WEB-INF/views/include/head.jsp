@@ -9,7 +9,9 @@
 <title>Phantom by HTML5 UP</title>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-<link rel="stylesheet" href="resources/assets/css/main.css" />
+<link rel="stylesheet" href="/resources/assets/css/main.css" />
+<link rel="stylesheet" href="/resources/assets/css/fontawesome-all.min.css" />
+<link rel="stylesheet" href="/resources/assets/css/noscript.css" />
 <!-- <noscript><link rel="stylesheet" href="resources/assets/css/noscript.css" /></noscript> -->
 <script type="text/javascript" src="/resources/js/common/asyncResponseError.js"></script>
 <script type="text/javascript" src="/resources/js/common/urlEncoder.js"></script>
