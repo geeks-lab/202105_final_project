@@ -27,6 +27,6 @@ public interface BoardRepository {
 	@Select("select * from user_suggest where sug_idx = #{sug_idx}")
 	Board selectBoardWithSugIdx(String sugIdx);
 	
-	@Select("select * from file where f_type_idx = #{sug_idx}")
+	@Select("select * from user_file where f_type_idx = #{sug_idx}")
 	List<FileVo> selectFileWithSugIdx(String sugIdx);
 }
