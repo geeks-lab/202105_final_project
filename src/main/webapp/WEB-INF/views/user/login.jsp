@@ -1,18 +1,22 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
    pageEncoding="UTF-8"%>
 <%@ include file="/WEB-INF/views/include/head.jsp" %>
-<html>
-	<body class="is-preload">
-	<!-- Wrapper -->
-	<div id="wrapper">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+<link rel="stylesheet" href="/resources/assets/css/main.css">
+<link rel="stylesheet" href="/resources/assets/css/noscript.css">
+<link rel="stylesheet" href="/resources/assets/css/fontawesome-all.min.css">
+<link rel="stylesheet" href="/resources/css/login.css">
+</head>
 
-		<!-- Header -->
+<!DOCTYPE HTML>
+<html>
+	<!-- Header -->
 		<header id="header">
 			<div class="inner">
-
 				<!-- Logo -->
 					<a href="index.html" class="logo">
-						<span class="symbol"><img src="resources/images/logo.svg" alt="" /></span><span class="title">Phantom</span>
+						<span class="symbol"><img src="/resources/images/logo.svg" alt="" /></span><span class="title">눈, 보라</span>
 					</a>
 
 				<!-- Nav -->
@@ -21,216 +25,144 @@
 							<li><a href="#menu">Menu</a></li>
 						</ul>
 					</nav>
-
 			</div>
 		</header>
 
-		<!-- Menu -->
-			<nav id="menu">
-				<h2>Menu</h2>
-				<ul>
-					<li><a href="index.html">Home</a></li>
-					<li><a href="generic.html">TESTACCOUNT</a></li>
-					<li><a href="generic.html">JIYOUNGTEST222</a></li>
-					<li><a href="generic.html">JIHYEONTEST222</a></li>
-					<li><a href="generic.html">SOHEETEST222</a></li>
-					<li><a href="generic.html">EUNJITEST222</a></li>
-					<li><a href="generic.html">SEUNGYEONTEST222</a></li>
-					<li><a href="generic.html">ONYOUTEST222</a></li>
-					<li><a href="generic.html">Consequat dolor</a></li>
-					<li><a href="elements.html">Elements</a></li>
-				</ul>
-			</nav>
-
-	<!-- Main -->
-		<div id="main">
-			<div class="inner">
-				<header>
-					<h1>This is Phantom, a free, fully responsive site<br />
-					template designed by <a href="http://html5up.net">HTML5 UP</a>.</h1>
-					<p>Etiam quis viverra lorem, in semper lorem. Sed nisl arcu euismod sit amet nisi euismod sed cursus arcu elementum ipsum arcu vivamus quis venenatis orci lorem ipsum et magna feugiat veroeros aliquam. Lorem ipsum dolor sit amet nullam dolore.</p>
-				</header>
-				<section class="tiles">
-					<article class="style1">
-						<span class="image">
-							<img src="resources/images/pic01.jpg" alt="" />
-						</span>
-						<a href="generic.html">
-							<h2>Magna</h2>
-							<div class="content">
-								<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
-							</div>
-						</a>
-					</article>
-					<article class="style2">
-						<span class="image">
-							<img src="resources/images/pic02.jpg" alt="" />
-						</span>
-						<a href="generic.html">
-							<h2>Lorem</h2>
-							<div class="content">
-								<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
-							</div>
-						</a>
-					</article>
-					<article class="style3">
-						<span class="image">
-							<img src="resources/images/pic03.jpg" alt="" />
-						</span>
-						<a href="generic.html">
-							<h2>Feugiat</h2>
-							<div class="content">
-								<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
-							</div>
-						</a>
-					</article>
-					<article class="style4">
-						<span class="image">
-							<img src="resources/images/pic04.jpg" alt="" />
-						</span>
-						<a href="generic.html">
-							<h2>Tempus</h2>
-							<div class="content">
-								<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
-							</div>
-						</a>
-					</article>
-					<article class="style5">
-						<span class="image">
-							<img src="resources/images/pic05.jpg" alt="" />
-						</span>
-						<a href="generic.html">
-							<h2>Aliquam</h2>
-							<div class="content">
-								<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
-							</div>
-						</a>
-					</article>
-					<article class="style6">
-						<span class="image">
-							<img src="resources/images/pic06.jpg" alt="" />
-						</span>
-						<a href="generic.html">
-							<h2>Veroeros</h2>
-							<div class="content">
-								<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
-							</div>
-						</a>
-					</article>
-					<article class="style2">
-						<span class="image">
-							<img src="resources/images/pic07.jpg" alt="" />
-						</span>
-						<a href="generic.html">
-							<h2>Ipsum</h2>
-							<div class="content">
-								<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
-							</div>
-						</a>
-					</article>
-					<article class="style3">
-						<span class="image">
-							<img src="resources/images/pic08.jpg" alt="" />
-						</span>
-						<a href="generic.html">
-							<h2>Dolor</h2>
-							<div class="content">
-								<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
-							</div>
-						</a>
-					</article>
-					<article class="style1">
-						<span class="image">
-							<img src="resources/images/pic09.jpg" alt="" />
-						</span>
-						<a href="generic.html">
-							<h2>Nullam</h2>
-							<div class="content">
-								<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
-							</div>
-						</a>
-					</article>
-					<article class="style5">
-						<span class="image">
-							<img src="resources/images/pic10.jpg" alt="" />
-						</span>
-						<a href="generic.html">
-							<h2>Ultricies</h2>
-							<div class="content">
-								<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
-							</div>
-						</a>
-					</article>
-					<article class="style6">
-						<span class="image">
-							<img src="resources/images/pic11.jpg" alt="" />
-						</span>
-						<a href="generic.html">
-							<h2>Dictum</h2>
-							<div class="content">
-								<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
-							</div>
-						</a>
-					</article>
-					<article class="style4">
-						<span class="image">
-							<img src="resources/images/pic12.jpg" alt="" />
-						</span>
-						<a href="generic.html">
-							<h2>Pretium</h2>
-							<div class="content">
-								<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
-							</div>
-						</a>
-					</article>
-				</section>
+	<!-- Menu -->
+		<nav id="menu">
+			<h2>Menu</h2>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="generic.html">TESTACCOUNT</a></li>
+				<li><a href="generic.html">JIYOUNGTEST222</a></li>
+				<li><a href="generic.html">JIHYEONTEST222</a></li>
+				<li><a href="generic.html">SOHEETEST222</a></li>
+				<li><a href="generic.html">EUNJITEST222</a></li>
+				<li><a href="generic.html">SEUNGYEONTEST222</a></li>
+				<li><a href="generic.html">ONYOUTEST222</a></li>
+				<li><a href="generic.html">Consequat dolor</a></li>
+				<li><a href="elements.html">Elements</a></li>
+			</ul>
+		</nav>
+	
+	<!-- section -->
+	<section class="content">
+		<div class="titleBox">
+			<h1>로그인</h1>
+			<hr>
+		</div>
+		
+		<div class="formBox">
+			<div class="form valid_info">
+				<form method="post">
+					<div class="formId">
+						<label class="label">아이디</label>
+						<input type="text" name="userId" id="id"/>
+					</div>
+					
+					<div class="formPw">
+						<label class="label">비밀번호</label>
+						<input type="password" name="password" id="pw"/>
+					</div>
+					
+					<div class="submit">	
+						<button type="submit" class="primary" onclick="login()">로그인</button>
+					</div>
+				</form>
 			</div>
 		</div>
+	</section>
+	
+	
 
-		<!-- Footer -->
-			<footer id="footer">
-				<div class="inner">
-					<section>
-						<h2>Get in touch</h2>
-						<form method="post" action="#">
-							<div class="fields">
-								<div class="field half">
-									<input type="text" name="name" id="name" placeholder="Name" />
-								</div>
-								<div class="field half">
-									<input type="email" name="email" id="email" placeholder="Email" />
-								</div>
-								<div class="field">
-									<textarea name="message" id="message" placeholder="Message"></textarea>
-								</div>
+	
+	
+	
+	
+	<!-- Footer -->
+		<footer id="footer">
+			<div class="inner">
+				<section>
+					<h2>Get in touch</h2>
+					<form method="post" action="#">
+						<div class="fields">
+							<div class="field half">
+								<input type="text" name="name" id="name" placeholder="Name" />
 							</div>
-							<ul class="actions">
-								<li><input type="submit" value="Send" class="primary" /></li>
-							</ul>
-						</form>
-					</section>
-					<section>
-						<h2>Follow</h2>
-						<ul class="icons">
-							<li><a href="#" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a></li>
-							<li><a href="#" class="icon brands style2 fa-facebook-f"><span class="label">Facebook</span></a></li>
-							<li><a href="#" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li>
-							<li><a href="#" class="icon brands style2 fa-dribbble"><span class="label">Dribbble</span></a></li>
-							<li><a href="#" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
-							<li><a href="#" class="icon brands style2 fa-500px"><span class="label">500px</span></a></li>
-							<li><a href="#" class="icon solid style2 fa-phone"><span class="label">Phone</span></a></li>
-							<li><a href="#" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
+							<div class="field half">
+								<input type="email" name="email" id="email" placeholder="Email" />
+							</div>
+							<div class="field">
+								<textarea name="message" id="message" placeholder="Message"></textarea>
+							</div>
+						</div>
+						<ul class="actions">
+							<li><input type="submit" value="Send" class="primary" /></li>
 						</ul>
-					</section>
-					<ul class="copyright">
-						<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</form>
+				</section>
+				<section>
+					<h2>Follow</h2>
+					<ul class="icons">
+						<li><a href="#" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="#" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
+						<li><a href="#" class="icon solid style2 fa-phone"><span class="label">Phone</span></a></li>
+						<li><a href="#" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
 					</ul>
-				</div>
-			</footer>
+				</section>
+				<ul class="copyright">
+					<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+				</ul>
+			</div>
+		</footer>
 
-		</div>
 
-	<%@ include file="/WEB-INF/views/include/script.jsp" %>
+<script type="text/javascript">
+	
+	let login = () => {
+		
+		const url = '/member/loginimpl';
+		let params = {};
+		params.userId = id.value;
+		params.password = pw.value;
 
-	</body>
+		//post방식으로 진행
+		//헤더 설정
+		let headerObj = new Headers();
+		//form태그의 기본 content 타입인 application/x-www-form-urlencoded 로
+		//content-type을 맞춰야 서버에서 편하게 getParameter로 사용 할 수 있다.
+		//name=value&name=value
+		headerObj.append("content-type","application/json");
+		
+		fetch(url,{
+			method:"post",
+			headers:headerObj,
+			body:JSON.stringify(params)
+		})
+		.then(response => {
+			//200번대 응답코드라면
+			if(response.ok){
+				return response.text();
+			}else{
+				throw new AsyncResponseError(response.text());
+			}
+		})
+		.then(text => {
+			if(text == 'fail'){
+				document.querySelector('.valid_info').innerHTML = '아이디나 비밀번호를 확인하세요.';
+			}else if(text == 'success'){
+				location.href = "/index";
+			}
+		}).catch((error)=>{
+			error.alertMessage();
+		})
+	}
+	
+	
+	
+	</script>
+
+   <%@ include file="/WEB-INF/views/include/script.jsp" %>
+
+   </body>
 </html>

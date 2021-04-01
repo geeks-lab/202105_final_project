@@ -1,34 +1,31 @@
 @charset "UTF-8";
 
-h2{
-	
+h1{
+	align-items: center;
+	text-align: center;
+	margin: 0;
 }
 
-.content{
+/* 
+
+label,input,button{
+	font-size: 3.5vh;
+}
+ */
+
+
+.contentBox{
     width: 75%;
 	height: 100%;
     background: #fff;
     margin: 4rem auto;
     padding: 60px;
-	
-    
 }
-
-.titleBox{
-	
-}
-
-/* 
-background-color: gray;
-opacity: 0.05;
-
-*/
 
 .formBox{
 	display: flex;
 	justify-content: center;
 	width: 100%;
-	
 }
 
 .form{
@@ -38,43 +35,115 @@ opacity: 0.05;
 .formBox>form{
 	width: 80%;
 	color: black;
-	font-size: 1em;
 	padding: 3.2em;
 }
 
-
-
 .label{
-	font-size: 1em;
+	font-size: 3.5vh;
 	display: flex;
 	text-align: center;
-    
 }
 
-.idWrap{
-	display: flex;
-	
-}
-
-.formId{
+.formWrap{
+	display:flex;
 	width: 100%;
+	align-items: center;
+	padding-bottom: 40px;
+	font-size: 3.5vh;
+}
+
+.label{
+	display: flex;
+	width: 30%;
+	margin: 0;
+	align-items: center;
+	font-size: 3.5vh;
+}
+
+.input{
+	display: flex;
+	width: 70%;
+	font-size: 3.5vh;
 }
 
 .idCheck{
-	display: flex;
-	width: 100%;
-	display: grid;
-}
-.submit{
-	display:flex;
 	width: 100%;
 	flex:auto;
-	display: grid;
+	padding-bottom: 40px;
 }
 
+.idCheck>button{
+	width: 100%
+}
 
+.submit>button{
+		width: 100%
+}
 
+.submit{
+	width: 100%;
+	flex:auto;
+	padding-top: 0;
+	padding-bottom: 40px;
+	font-size: 3.5vh;
+}
 
+/* 미디어쿼리 */
 
+@media screen and (max-width: 800px){
+	.contentBox{
+		width:100%;
+		padding: 0;
+	}
+    .contentBox label{
+        font-size: 1.5vh;
+    }
+    .contentBox input{
+        font-size: 1.5vh;
+    }
+    
+    .formWrap{
+		display:flex;
+		width: 100%;
+		align-items: center;
+		padding-bottom: 20px;
+	}
+	
+	.formId,.formPw,.formPwCheck{
+		width: 100%;
+	}
+	
+	.formWrap>label{
+		width: 35%
+	}
+	
+	.formWrap>input{
+		width: 55%;
+	}
 
+/* web이랑 padding 간격 다름 */
+	.idCheck{
+		padding-bottom: 20px;
+	}
+    .idCheck button{
+    	font-size: 1.5vh;
+    }
+    .submit{
+    	padding-top: 0;
+    	padding-bottom: 20px;
+    }
+    
+    .submit button{
+    	font-size: 1.5vh;
+    }
+    
+    
+}
 
+@media all and (min-width:801px) and (max-width:1023px) {
+    .formWrap{
+    	font-size: 3.5vh;
+    }
+    
+
+}
