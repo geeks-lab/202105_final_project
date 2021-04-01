@@ -53,7 +53,7 @@
 							<header>
 								<h3>불편한 당신의 눈을 대신해드립니다</h3>
 							</header>
-							<section class="tiles">
+							<section class="tiles mytiles">
 								<article class="style1">
 									<span class="image">
 										<img src="resources/images/pic01.jpg" alt="" />

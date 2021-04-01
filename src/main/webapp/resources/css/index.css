@@ -4,6 +4,10 @@
 	padding: 2em 0 0.1em 0;
 }
 
+.tiles{
+	justify-content: center;
+}
+
 .style1{
 	width: 35vw !important;
 }
@@ -47,6 +51,9 @@
 .icons>li>a{
 	width: 80vw !important;
 }
+
+
+
 
 
 
