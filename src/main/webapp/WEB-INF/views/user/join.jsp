@@ -2,82 +2,83 @@
    pageEncoding="UTF-8"%>
 <%@ include file="/WEB-INF/views/include/head.jsp" %>
 <head>
-<link rel="stylesheet" href="/resources/assets/css/main.css">
-<link rel="stylesheet" href="/resources/assets/css/noscript.css">
-<link rel="stylesheet" href="/resources/assets/css/fontawesome-all.min.css">
-<link rel="stylesheet" href="/resources/css/join.css">
+	<title>회원가입</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1, user-scalable=no">
+	<link rel="stylesheet" href="/resources/assets/css/main.css">
+	<link rel="stylesheet" href="/resources/assets/css/noscript.css">
+	<link rel="stylesheet" href="/resources/assets/css/fontawesome-all.min.css">
+	<link rel="stylesheet" href="/resources/css/join.css">
 </head>
 
 <!DOCTYPE HTML>
 <html>
-		<!-- Wrapper -->
-			<div id="wrapper">
+	<!-- Header -->
+	<header id="header">
+		<div class="inner">
 
-				<!-- Header -->
-					<header id="header">
-						<div class="inner">
+			<!-- Logo -->
+				<a href="index.html" class="logo">
+					<span class="symbol"><img src="/resources/images/logo.svg" alt="" /></span><span class="title">눈, 보라</span>
+				</a>
 
-							<!-- Logo -->
-								<a href="index.html" class="logo">
-									<span class="symbol"><img src="/resources/images/logo.svg" alt="" /></span><span class="title">눈, 보라</span>
-								</a>
+			<!-- Nav -->
+				<nav>
+					<ul>
+						<li><a href="#menu">Menu</a></li>
+					</ul>
+				</nav>
 
-							<!-- Nav -->
-								<nav>
-									<ul>
-										<li><a href="#menu">Menu</a></li>
-									</ul>
-								</nav>
+		</div>
+	</header>
 
-						</div>
-					</header>
-
-				<!-- Menu -->
-					<nav id="menu">
-						<h2>Menu</h2>
-						<ul>
-							<li><a href="index.html">Home</a></li>
-							<li><a href="generic.html">TESTACCOUNT</a></li>
-							<li><a href="generic.html">JIYOUNGTEST222</a></li>
-							<li><a href="generic.html">JIHYEONTEST222</a></li>
-							<li><a href="generic.html">SOHEETEST222</a></li>
-							<li><a href="generic.html">EUNJITEST222</a></li>
-							<li><a href="generic.html">SEUNGYEONTEST222</a></li>
-							<li><a href="generic.html">ONYOUTEST222</a></li>
-							<li><a href="generic.html">Consequat dolor</a></li>
-							<li><a href="elements.html">Elements</a></li>
-						</ul>
-					</nav>
+	<!-- Menu -->
+		<nav id="menu">
+			<h2>Menu</h2>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="generic.html">TESTACCOUNT</a></li>
+				<li><a href="generic.html">JIYOUNGTEST222</a></li>
+				<li><a href="generic.html">JIHYEONTEST222</a></li>
+				<li><a href="generic.html">SOHEETEST222</a></li>
+				<li><a href="generic.html">EUNJITEST222</a></li>
+				<li><a href="generic.html">SEUNGYEONTEST222</a></li>
+				<li><a href="generic.html">ONYOUTEST222</a></li>
+				<li><a href="generic.html">Consequat dolor</a></li>
+				<li><a href="elements.html">Elements</a></li>
+			</ul>
+		</nav>
 	
-		<div class="content">
+	<!-- section -->
+		<section class="contentBox">
 			<div class="titleBox">
-				<h2>회원가입</h2>
+				<h1>회원가입</h1>
 				<hr>
 			</div>
 			<div class="formBox">
 				<div class="form">
 					<form:form modelAttribute="user" action="${context}/user/joinimpl" method="post" id="frm_join">
-					<div class="idWrap">
-						<div class="formId">
+						<div class="formId formWrap">
 							<label class="label">아이디 </label>
-							<input type="text" name="userId" id="id" size="10" placeholder="아이디를 입력하세요." required/>
-							<div class="idCheck"><button type="button" onclick="idCheck()">중복확인</button></div>
+							<input class="input" type="text" name="userId" id="id" size="10" placeholder="아이디를 입력하세요." required/>
 						</div>
 						
-					</div>	
-						<div class="formPw">
+						<div class="idCheck formWrap">
+							<button type="button" onclick="idCheck()">중복확인</button>
+						</div>
+
+						<div class="formPw formWrap">
 							<label class="label">비밀번호 </label>
-							<input type="password" name="password" id="pw" placeholder="비밀번호를 입력하세요." required/>
+							<input class="input" type="password" name="password" id="pw" placeholder="비밀번호를 입력하세요." required/>
 						</div>
 						
-						<div class="formPwCheck">
+						<div class="formPwCheck formWrap">
 							<label class="label">비밀번호 확인 </label>
-							<input type="password" name="password" id="pw" placeholder="비밀번호를 입력하세요." required/>
+							<input class="input" type="password" name="password" id="pw" placeholder="비밀번호를 입력하세요." required/>
 						</div>
 						
-						<div class="formName">
+						<div class="formName formWrap">
 							<label class="label">이름 </label>
-							<input type="text" name="name" placeholder="이름을 입력하세요." required/>
+							<input class="input" type="text" name="name" placeholder="이름을 입력하세요." required/>
 						</div>
 			
 						<div class="submit">
@@ -86,7 +87,7 @@
 					</form:form>
 				</div>
 			</div>
-		</div>
+		</section>
 		
 		<!-- Footer -->
 					<footer id="footer">
