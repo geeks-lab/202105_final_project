@@ -20,6 +20,11 @@
 		th>span{
 			text-align: center;
 		}
+		
+		pre{
+          overflow: auto;
+          white-space: pre-wrap;
+      	}
 	</style>
 </head>
 	<body class="is-preload">

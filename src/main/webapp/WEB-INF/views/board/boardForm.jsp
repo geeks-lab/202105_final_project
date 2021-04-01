@@ -12,24 +12,8 @@
 <head>
 	<style type="text/css">
 	textarea{
-		-webkit-text-size-adjust: none;
-	    box-sizing: inherit;
-	    font-family: "Source Sans Pro", Helvetica, sans-serif;
-	    font-weight: 300;
-	    line-height: 1.75;
-	    font-size: 12pt;
-	    appearance: none;
-	    background-color: transparent;
 	    border: solid 1px #c9c9c9;
-	    border-radius: 0;
-	    color: inherit;
-	    display: block;
-	    outline: 0;
-	    padding: 0;
-	    text-decoration: none;
-	    width: 100%;
 	    min-height: 20em;
-	    box-shadow: none;
 	}
 	
 	textarea:focus{
@@ -44,8 +28,8 @@
 					<header id="header">
 						<div class="inner">
 							<!-- Logo -->
-								<a href="index.jsp" class="logo">
-									<span class="symbol"><img src="/resources/images/logo.svg" alt="" /></span><span class="title">눈,보라</span>
+								<a href="/index" class="logo">
+									<span class="symbol"><img src="/resources/images/eyesLogo.png" alt="" /></span><span class="title">눈, 보라</span>
 								</a>
 							<!-- Nav -->
 								<nav>
@@ -109,7 +93,7 @@
 							</div>
 						</div>
 					</div>
-				</div>
+				
 				<!-- Footer -->
 					<footer id="footer">
 						<div class="inner">
