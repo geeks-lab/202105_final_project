@@ -6,12 +6,12 @@ h1{
 	margin: 0;
 }
 
-label,input,button{
-	font-size: 25px;
+#contentBox{
+	width: 75%;
 }
 
-.content{
-    width: 75%;
+.contentBox{
+	width: 75%;
 	height: 100%;
     background: #fff;
     margin: 4rem auto;
@@ -31,21 +31,21 @@ label,input,button{
 .formBox>form{
 	width: 80%;
 	color: black;
-	font-size: 25px;
 	padding: 3.2em;
 }
 
 .label{
-	font-size: 25px;
+	font-size: 3.5vh;
 	display: flex;
 	text-align: center;
 }
 
-.formId,.formPw,.formPwCheck,.formName{
+.formWrap{
 	display:flex;
 	width: 100%;
 	align-items: center;
-	padding-bottom: 20px;
+	padding-bottom: 40px;
+	font-size: 3.5vh;
 }
 
 .label{
@@ -53,26 +53,77 @@ label,input,button{
 	width: 30%;
 	margin: 0;
 	align-items: center;
-	font-size: 25px;
+	font-size: 3.5vh;
 }
 
 .input{
 	display: flex;
 	width: 70%;
-	font-size: 25px;
+	font-size: 3.5vh;
 }
 
-.idCheck{
-	width: 100%;
-	flex:auto;
-	display: grid;
-	padding-bottom: 20px;
+.submit>button{
+		width: 100%
 }
 
 .submit{
 	width: 100%;
 	flex:auto;
-	display: grid;
-	padding-top:20px;
-	padding-bottom: 20px;
+	padding-top: 0;
+	padding-bottom: 40px;
+	font-size: 3.5vh;
+}
+
+/* 미디어쿼리 */
+
+@media screen and (max-width: 800px){
+	.contentBox{
+		width:100%;
+		padding: 0;
+	}
+    label{
+        font-size: 1.5vh;
+    }
+    input{
+        font-size: 1.5vh;
+    }
+    
+    .formWrap{
+		display:flex;
+		width: 100%;
+		align-items: center;
+		padding-bottom: 20px;
+	}
+	
+	.formId,.formPw{
+		width: 100%;
+	}
+	
+	.formWrap>label{
+		width: 35%
+	}
+	
+	.formWrap>input{
+		width: 55%;
+	}
+
+/* web이랑 padding 간격 다름 */
+    .submit{
+    	padding-top: 0;
+    	padding-bottom: 20px;
+    }
+    
+    .submit button{
+    	font-size: 1.5vh;
+    }
+    
+    
+}
+
+@media all and (min-width:801px) and (max-width:1023px) {
+    .formWrap{
+    	font-size: 3.5vh;
+    }
+    
+
 }
