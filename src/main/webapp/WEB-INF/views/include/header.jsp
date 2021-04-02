@@ -11,7 +11,7 @@
 		<div class="inner">
 			<!-- Logo -->
 				<a href="index.html" class="logo">
-					<span class="symbol"><img src="resources/images/eyesLogo.png" alt="" /></span><span class="title">눈, 보라</span>
+					<span class="symbol"><img src="/resources/images/eyesLogo.png" alt="" /></span><span class="title">눈, 보라</span>
 				</a>
 			<!-- Nav -->
 				<nav>

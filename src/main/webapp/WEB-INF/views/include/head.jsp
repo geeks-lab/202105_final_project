@@ -12,6 +12,7 @@
 <link rel="stylesheet" href="/resources/assets/css/main.css" />
 <link rel="stylesheet" href="/resources/assets/css/fontawesome-all.min.css" />
 <link rel="stylesheet" href="/resources/assets/css/noscript.css" />
+<link rel="stylesheet" href="/resources/css/index.css" />
 <!-- <noscript><link rel="stylesheet" href="resources/assets/css/noscript.css" /></noscript> -->
 <script type="text/javascript" src="/resources/js/common/asyncResponseError.js"></script>
 <script type="text/javascript" src="/resources/js/common/urlEncoder.js"></script>
