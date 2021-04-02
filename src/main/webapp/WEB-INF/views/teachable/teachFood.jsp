@@ -17,7 +17,7 @@
 				</header>
 				<section class="tiles mytiles">
 					<article class="style1">
-						<span class="image"> <img src="/resources/images/pic02.jpg" alt="" />
+						<span class="image"> <img src="/resources/images/pic01.jpg" alt="" />
 						</span> <a href="generic.html">
 							<div class="content">
 								<img style="width: 20%; opacity: 70%;" src="/resources/images/camera.png" alt="" />
