@@ -100,7 +100,7 @@
 							   <button  class ="button primary fit" onclick="clearText()" style="font-size:25px; background-color: #f2849e;">내용 지우기</button>
 							 	
 							   </form> 
-							    <script src="script.js"></script>
+							    <!-- <script src="script.js"></script> -->
 							    <!-- ---- -->
 							 
                            
