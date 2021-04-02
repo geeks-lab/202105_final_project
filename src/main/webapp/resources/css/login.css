@@ -99,21 +99,21 @@ h1{
 	width: 100%;
 	align-items: center;
 	padding-bottom: 20px;
-	font-size: 1.5vh;
+	font-size: 3.5vw;
 }
 	
 .formId label{
-	font-size: 1.5vh;
+	font-size: 3.5vw;
 	padding-bottom: 0;
 }
 
 .formPw label{
-	font-size: 1.5vh;
+	font-size: 3.5vw;
 	padding-bottom: 0;
 }
 
 #formId,#formPw{
-	font-size: 1.5vh;
+	font-size: 3.5vw;
 }
 
 
@@ -130,7 +130,7 @@ h1{
 }
 
 #font{
-	font-size: 1.5vh;
+	font-size: 3.5vw;
 }
 
 /* web이랑 padding 간격 다름 */
