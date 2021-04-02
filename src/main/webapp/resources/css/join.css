@@ -10,7 +10,7 @@ h1{
     width: 75%;
 	height: 100%;
     background: #fff;
-    margin: 4rem auto;
+    margin: 1em auto;
     padding: 60px;
 }
 
@@ -30,18 +30,12 @@ h1{
 	padding: 3.2em;
 }
 
-.label{
-	font-size: 3.5vh;
-	display: flex;
-	text-align: center;
-}
-
 .formWrap{
 	display:flex;
 	width: 100%;
 	align-items: center;
 	padding-bottom: 40px;
-	font-size: 3.5vh;
+	font-size: 1.8vw;
 }
 
 .label{
@@ -49,13 +43,14 @@ h1{
 	width: 30%;
 	margin: 0;
 	align-items: center;
-	font-size: 3.5vh;
+	font-size: 1.8vw;
+	text-align: left;
 }
 
 .input{
 	display: flex;
 	width: 70%;
-	font-size: 3.5vh;
+	font-size: 1.8vw;
 }
 
 .idCheck{
@@ -77,65 +72,58 @@ h1{
 	flex:auto;
 	padding-top: 0;
 	padding-bottom: 40px;
-	font-size: 3.5vh;
+	font-size: 1.8vw;
 }
+
 
 /* 미디어쿼리 */
-
 @media screen and (max-width: 480px){
-	.contentBox{
-		width:100%;
-		padding: 0;
-	}
-    .contentBox label{
-        font-size: 1.5vh;
-    }
-    .contentBox input{
-        font-size: 1.5vh;
-    }
-    
-    .formWrap{
-		display:flex;
-		width: 100%;
-		align-items: center;
-		padding-bottom: 20px;
-	}
 	
-	.formId,.formPw,.formPwCheck{
-		width: 100%;
-	}
-	
-	.formWrap>label{
-		width: 35%
-	}
-	
-	.formWrap>input{
-		width: 55%;
-	}
+.contentBox{
+	width:100%;
+	padding: 0;
+}
+   .contentBox label{
+       font-size: 3.5vw;
+   }
+   .contentBox input{
+      font-size: 3.5vw;
+   }
+   
+   .formWrap{
+	display:flex;
+	width: 100%;
+	align-items: center;
+	padding-bottom: 20px;
+}
+
+.formId,.formPw,.formPwCheck{
+	width: 100%;
+}
+
+.formWrap>label{
+	width: 35%
+}
+
+.formWrap>input{
+	width: 55%;
+}
 
 /* web이랑 padding 간격 다름 */
-	.idCheck{
-		padding-bottom: 20px;
-	}
-    .idCheck button{
-    	font-size: 1.5vh;
-    }
-    .submit{
-    	padding-top: 0;
-    	padding-bottom: 20px;
-    }
-    
-    .submit button{
-    	font-size: 1.5vh;
-    }
-    
-    
+.idCheck{
+	padding-bottom: 20px;
 }
-
-@media all and (min-width:801px) and (max-width:1023px) {
-    .formWrap{
-    	font-size: 3.5vh;
-    }
-    
+   .idCheck button{
+   	font-size: 3.5vw;
+   }
+   .submit{
+   	padding-top: 0;
+   	padding-bottom: 20px;
+   }
+   
+   .submit button{
+   	font-size: 3.5vw;
+   }
 
 }
+

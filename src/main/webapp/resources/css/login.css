@@ -6,15 +6,11 @@ h1{
 	margin: 0;
 }
 
-#contentBox{
-	width: 75%;
-}
-
 .contentBox{
 	width: 75%;
 	height: 100%;
     background: #fff;
-    margin: 4rem auto;
+    margin: 4em auto;
     padding: 60px;
 }
 
@@ -34,19 +30,12 @@ h1{
 	padding: 3.2em;
 }
 
-.label{
-	/* font-size: 3.5vh; */
-	
-	display: flex;
-	text-align: center;
-}
-
 .formWrap{
 	display:flex;
 	width: 100%;
 	align-items: center;
 	padding-bottom: 40px;
-	font-size: 3.5vh;
+	font-size: 1.8vw;
 }
 
 .label{
@@ -54,13 +43,14 @@ h1{
 	width: 30%;
 	margin: 0;
 	align-items: center;
-	font-size: 3.5vh;
+	font-size: 1.8vw;
+	text-align: left;
 }
 
 .input{
 	display: flex;
 	width: 70%;
-	font-size: 3.5vh;
+	font-size: 1.8vw;
 }
 
 .submit>button{
@@ -72,7 +62,7 @@ h1{
 	flex:auto;
 	padding-top: 0;
 	padding-bottom: 40px;
-	font-size: 3.5vh;
+	font-size: 1.8vw;
 }
 
 
@@ -90,59 +80,58 @@ h1{
 }
 
 
-
-
 /* 미디어쿼리 */
 @media screen and (max-width: 480px){
-	/* footer */
-	.footersection{
-   		padding-left: 5vw;
-   }
+	
+/* footer */
+.footersection{
+  		padding-left: 5vw;
+  }
+  
+/* web이랑 글자크기 다름 */
+.contentBox{
+	width:100%;
+	padding: 0;
+}	
    
-	/* web이랑 글자크기 다름 */
-	.contentBox{
-		width:100%;
-		padding: 0;
-	}	
-    
-    .formWrap > *{
-		display:flex;
-		width: 100%;
-		align-items: center;
-		padding-bottom: 20px;
-		font-size: 1.5vh;
-	}
-		
-	.formId label{
-		font-size: 1.5vh;
-		padding-bottom: 0;
-	}
+   .formWrap > *{
+	display:flex;
+	width: 100%;
+	align-items: center;
+	padding-bottom: 20px;
+	font-size: 1.5vh;
+}
 	
-	.formPw label{
-		font-size: 1.5vh;
-		padding-bottom: 0;
-	}
-	
-	#formId,#formPw{
-		font-size: 1.5vh;
-	}
-	
-	
-	.formId,.formPw{
-		width: 100%;
-	}
-	
-	.formWrap>label{
-		width: 35%;
-	}
-	
-	.formWrap>input{
-		width: 55%;
-	}
-	
-	#font{
-		font-size: 1.5vh;
-	}
+.formId label{
+	font-size: 1.5vh;
+	padding-bottom: 0;
+}
+
+.formPw label{
+	font-size: 1.5vh;
+	padding-bottom: 0;
+}
+
+#formId,#formPw{
+	font-size: 1.5vh;
+}
+
+
+.formId,.formPw{
+	width: 100%;
+}
+
+.formWrap>label{
+	width: 35%;
+}
+
+.formWrap>input{
+	width: 55%;
+}
+
+#font{
+	font-size: 1.5vh;
+}
 
 /* web이랑 padding 간격 다름 */
     .submit{
@@ -151,7 +140,7 @@ h1{
     }
     
     .submit button{
-    	font-size: 1.5vh;
+    	font-size: 3.5vw;
     }
     
     
