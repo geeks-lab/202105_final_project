@@ -1,4 +1,62 @@
 @charset "UTF-8";
-body{
-	color: red;
+
+#header{
+	padding: 2em 0 0.1em 0;
 }
+
+.tiles{
+	justify-content: center;
+}
+
+.majortiles{
+	width: 36vw !important;
+}
+
+.majortiles>span{
+	height: 35vh !important;
+}
+
+.othertiles{
+	width: 76vw !important;
+}
+
+.othertiles>span{
+	height: 25vh !important;
+}
+
+.icons>li>a{
+	width: 80vw !important;
+}
+.footersection{
+	padding-left: 3vw;
+}
+
+@media screen and (max-width: 480px) {
+
+	.majortiles{
+		width: 76vw !important;
+	}
+
+	.majortiles>span{
+		height: 15vh !important;
+	}
+	
+	.othertiles>span{
+		height: 15vh !important;
+	}
+	
+	.content>p{
+		font-size: small;
+	}
+	
+	.footersection{
+	padding-left: 5vw;
+}
+	
+	
+}
+
+
+
+
+

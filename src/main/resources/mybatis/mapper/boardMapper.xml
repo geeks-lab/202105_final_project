@@ -5,7 +5,7 @@
 	<!-- 1. 게시글 등록
 		2. 게시글 수정 -->
 	<insert id="insertFile">
-	insert into file(f_idx, f_type_idx, f_origin_name, f_re_name, f_save_path) 
+	insert into user_file(f_idx, f_type_idx, f_origin_name, f_re_name, f_save_path) 
 	values(sc_f_idx.nextval, 
 		<choose>
 			<when test="fTypeIdx != null">

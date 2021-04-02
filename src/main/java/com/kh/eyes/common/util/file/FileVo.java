@@ -6,7 +6,7 @@ import com.kh.eyes.common.code.Code;
 
 public class FileVo {
 	
-	private int fInx;
+	private int fIdx;
 	private String fTypeIdx;
 	private String fOriginName;
 	private String fReName;
@@ -18,12 +18,12 @@ public class FileVo {
 		return Code.UPLOAD + fSavePath;
 	}
 
-	public int getfInx() {
-		return fInx;
+	public int getfIdx() {
+		return fIdx;
 	}
 
-	public void setfInx(int fInx) {
-		this.fInx = fInx;
+	public void setfInx(int fIdx) {
+		this.fIdx = fIdx;
 	}
 
 	public String getfTypeIdx() {
@@ -76,7 +76,7 @@ public class FileVo {
 
 	@Override
 	public String toString() {
-		return "FileVo [fInx=" + fInx + ", fTypeIdx=" + fTypeIdx + ", fOriginName=" + fOriginName + ", fReName="
+		return "FileVo [fIdx=" + fIdx + ", fTypeIdx=" + fTypeIdx + ", fOriginName=" + fOriginName + ", fReName="
 				+ fReName + ", fSavePath=" + fSavePath + ", fRegDate=" + fRegDate + ", fIsDel=" + fIsDel + "]";
 	}
 	

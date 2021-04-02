@@ -1,8 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
    pageEncoding="UTF-8"%>
 <%@ include file="/WEB-INF/views/include/head.jsp" %>
-
-<!DOCTYPE HTML>
+<head>
+<link rel="stylesheet" href="/resources/css/index.css" />
+</head>
 <!--
 	Phantom by HTML5 UP
 	html5up.net | @ajlkn
@@ -19,7 +20,7 @@
 
 							<!-- Logo -->
 								<a href="index.html" class="logo">
-									<span class="symbol"><img src="resources/images/logo.svg" alt="" /></span><span class="title">Phantom</span>
+									<span class="symbol"><img src="resources/images/eyesLogo.png" alt="" /></span><span class="title">눈, 보라</span>
 								</a>
 
 							<!-- Nav -->
@@ -28,24 +29,20 @@
 										<li><a href="#menu">Menu</a></li>
 									</ul>
 								</nav>
-
 						</div>
 					</header>
 
 				<!-- Menu -->
 					<nav id="menu">
-						<h2>Menu</h2>
+						<h2>메뉴</h2>
 						<ul>
-							<li><a href="index.html">Home</a></li>
-							<li><a href="generic.html">TESTACCOUNT</a></li>
-							<li><a href="generic.html">JIYOUNGTEST222</a></li>
-							<li><a href="generic.html">JIHYEONTEST222</a></li>
-							<li><a href="generic.html">SOHEETEST222</a></li>
-							<li><a href="generic.html">EUNJITEST222</a></li>
-							<li><a href="generic.html">SEUNGYEONTEST222</a></li>
-							<li><a href="generic.html">ONYOUTEST222</a></li>
-							<li><a href="generic.html">Consequat dolor</a></li>
-							<li><a href="elements.html">Elements</a></li>
+							<li><a href="index.html">메인 페이지</a></li>
+							<li><a href="generic.html">로그인 | 회원가입</a></li>
+							<li><a href="generic.html">식음료 찾기</a></li>
+							<li><a href="generic.html">생필품 찾기</a></li>
+							<li><a href="generic.html">목소리 되어주기</a></li>
+							<li><a href="generic.html">이용안내</a></li>
+							<li><a href="generic.html">고객의 소리함</a></li>
 						</ul>
 					</nav>
 
@@ -53,140 +50,61 @@
 					<div id="main">
 						<div class="inner">
 							<header>
-								<h1>This is Phantom, a free, fully responsive site<br />
-								template designed by <a href="http://html5up.net">HTML5 UP</a>.</h1>
-								<p>Etiam quis viverra lorem, in semper lorem. Sed nisl arcu euismod sit amet nisi euismod sed cursus arcu elementum ipsum arcu vivamus quis venenatis orci lorem ipsum et magna feugiat veroeros aliquam. Lorem ipsum dolor sit amet nullam dolore.</p>
+								<h3>불편한 당신의 눈을 대신해드립니다</h3>
 							</header>
-							<section class="tiles">
-								<article class="style1">
+							<section class="tiles mytiles">
+								<article class="style1 majortiles">
 									<span class="image">
 										<img src="resources/images/pic01.jpg" alt="" />
 									</span>
 									<a href="generic.html">
-										<h2>Magna</h2>
+										<h2>1. 식음료 찾기</h2>
 										<div class="content">
-											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
+											<p>음료수, 과자, 라면 등을 인식시켜주세요. <br>어떤 제품인지 말해드리고, 원하신다면 <br>상품에 있는 글자를 알려드릴 수도 있습니다.</p>
 										</div>
 									</a>
 								</article>
-								<article class="style2">
+								<article class="style2 majortiles">
 									<span class="image">
 										<img src="resources/images/pic02.jpg" alt="" />
 									</span>
 									<a href="generic.html">
-										<h2>Lorem</h2>
+										<h2>2. 생필품 찾기</h2>
 										<div class="content">
-											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
+											<p>칫솔, 생리용품 등을 인식시켜주세요. <br>어떤 제품인지 말해드리고, 원하신다면 <br>상품에 있는 글자를 알려드릴 수도 있습니다.</p>
 										</div>
 									</a>
 								</article>
-								<article class="style3">
+								<article class="style3 othertiles">
 									<span class="image">
 										<img src="resources/images/pic03.jpg" alt="" />
 									</span>
 									<a href="generic.html">
-										<h2>Feugiat</h2>
+										<h2>3. 목소리 되어주기</h2>
 										<div class="content">
-											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
+											<p>원하는 말을 적어주세요. 대신 말해드립니다.</p>
 										</div>
 									</a>
 								</article>
-								<article class="style4">
+								<article class="style4 othertiles">
 									<span class="image">
 										<img src="resources/images/pic04.jpg" alt="" />
 									</span>
 									<a href="generic.html">
-										<h2>Tempus</h2>
+										<h2>4.  이용 안내</h2>
 										<div class="content">
-											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
+											<p>어떻게 이용해야 하는지 상세히 알려드립니다.</p>
 										</div>
 									</a>
 								</article>
-								<article class="style5">
+								<article class="style5 othertiles">
 									<span class="image">
 										<img src="resources/images/pic05.jpg" alt="" />
 									</span>
 									<a href="generic.html">
-										<h2>Aliquam</h2>
+										<h2>5. 고객의 소리함</h2>
 										<div class="content">
-											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
-										</div>
-									</a>
-								</article>
-								<article class="style6">
-									<span class="image">
-										<img src="resources/images/pic06.jpg" alt="" />
-									</span>
-									<a href="generic.html">
-										<h2>Veroeros</h2>
-										<div class="content">
-											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
-										</div>
-									</a>
-								</article>
-								<article class="style2">
-									<span class="image">
-										<img src="resources/images/pic07.jpg" alt="" />
-									</span>
-									<a href="generic.html">
-										<h2>Ipsum</h2>
-										<div class="content">
-											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
-										</div>
-									</a>
-								</article>
-								<article class="style3">
-									<span class="image">
-										<img src="resources/images/pic08.jpg" alt="" />
-									</span>
-									<a href="generic.html">
-										<h2>Dolor</h2>
-										<div class="content">
-											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
-										</div>
-									</a>
-								</article>
-								<article class="style1">
-									<span class="image">
-										<img src="resources/images/pic09.jpg" alt="" />
-									</span>
-									<a href="generic.html">
-										<h2>Nullam</h2>
-										<div class="content">
-											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
-										</div>
-									</a>
-								</article>
-								<article class="style5">
-									<span class="image">
-										<img src="resources/images/pic10.jpg" alt="" />
-									</span>
-									<a href="generic.html">
-										<h2>Ultricies</h2>
-										<div class="content">
-											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
-										</div>
-									</a>
-								</article>
-								<article class="style6">
-									<span class="image">
-										<img src="resources/images/pic11.jpg" alt="" />
-									</span>
-									<a href="generic.html">
-										<h2>Dictum</h2>
-										<div class="content">
-											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
-										</div>
-									</a>
-								</article>
-								<article class="style4">
-									<span class="image">
-										<img src="resources/images/pic12.jpg" alt="" />
-									</span>
-									<a href="generic.html">
-										<h2>Pretium</h2>
-										<div class="content">
-											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
+											<p>불편한 사항 및 개선이 필요한 부분이 있다면 귀기울여 듣겠습니다.</p>
 										</div>
 									</a>
 								</article>
@@ -197,36 +115,13 @@
 				<!-- Footer -->
 					<footer id="footer">
 						<div class="inner">
-							<section>
-								<h2>Get in touch</h2>
-								<form method="post" action="#">
-									<div class="fields">
-										<div class="field half">
-											<input type="text" name="name" id="name" placeholder="Name" />
-										</div>
-										<div class="field half">
-											<input type="email" name="email" id="email" placeholder="Email" />
-										</div>
-										<div class="field">
-											<textarea name="message" id="message" placeholder="Message"></textarea>
-										</div>
-									</div>
-									<ul class="actions">
-										<li><input type="submit" value="Send" class="primary" /></li>
-									</ul>
-								</form>
-							</section>
-							<section>
+							<section class="footersection">
 								<h2>Follow</h2>
 								<ul class="icons">
-									<li><a href="#" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="#" class="icon brands style2 fa-facebook-f"><span class="label">Facebook</span></a></li>
-									<li><a href="#" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li>
-									<li><a href="#" class="icon brands style2 fa-dribbble"><span class="label">Dribbble</span></a></li>
-									<li><a href="#" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
-									<li><a href="#" class="icon brands style2 fa-500px"><span class="label">500px</span></a></li>
-									<li><a href="#" class="icon solid style2 fa-phone"><span class="label">Phone</span></a></li>
-									<li><a href="#" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
+									<li><a href="#" class="icon brands style2 fa-instagram">&nbsp;&nbsp;<span>Instagram</span></a></li>
+									<li><a href="#" class="icon brands style2 fa-github">&nbsp;&nbsp;<span>GitHub</span></a></li>
+									<li><a href="#" class="icon solid style2 fa-phone">&nbsp;&nbsp;<span>Phone</span></a></li>
+									<li><a href="#" class="icon solid style2 fa-envelope">&nbsp;&nbsp;<span>Email</span></a></li>
 								</ul>
 							</section>
 							<ul class="copyright">

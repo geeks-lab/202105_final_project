@@ -2,6 +2,7 @@
    pageEncoding="UTF-8"%>
 <%@ include file="/WEB-INF/views/include/head.jsp" %>
 
+
 <!DOCTYPE HTML>
 <!--
 	Phantom by HTML5 UP
@@ -9,6 +10,37 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
+<style type="text/css">
+
+.box_demo {
+    position: relative;
+    resize: none;
+    height: 284px;
+    padding: 19px 29px;
+    border: 1px solid #30cfb3;
+    box-sizing: border-box;
+    }
+    
+.box_demo .inp_tf {
+    resize: none;
+    height: 250px;
+    border: 0 none;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 50px;
+    line-height: 55px;
+    color: #000;
+    background: #f9f9f9;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    resize: none;
+    outline: none;
+    letter-spacing: -0.025em;
+  
+}
+
+
+</style>
+
 	<body class="is-preload">
 		<!-- Wrapper -->
 			<div id="wrapper">
@@ -19,7 +51,7 @@
 
 							<!-- Logo -->
 								<a href="index.html" class="logo">
-									<span class="symbol"><img src="resources/images/logo.svg" alt="" /></span><span class="title">Phantom</span>
+									<span class="symbol"><img src="resources/images/logo.svg" alt="" /></span><span class="title">눈, 보라</span>
 								</a>
 
 							<!-- Nav -->
@@ -51,61 +83,56 @@
 
 				<!-- Main -->
 					<div id="main">
+					
 						<div class="inner">
+						
 							<header>
-								<h1>대신 말씀을 전달해 드립니다. <i class="fas fa-bullhorn"></i> </h1>
+								<h1>목소리 되어주기</h1>
+								<p>원하는 말을 적어주세요. 대신 말해드립니다.</p>
 							</header>
+							<!-- 내용 입력칸 -->
+							<div class="box_demo">
+                        		<textarea id="txtDemo" class="inp_tf" rows="4" placeholder="원하는 말을 적어주세요. 대신 말해드립니다."></textarea>
+                    		</div>
+							<br>
 							
-                			  <textarea name="" id="" class="form-control" placeholder="하고싶은 말을 적어주세요." cols="30" rows="10"></textarea>
-               				 	<input type="submit" value="Send Message" class="primary">
-               				
+							<button type="button" class="button primary fit" style="font-size:25px; background-color: #30cfb3;">
+                                <span id="playBtn">▶ 음성듣기</span>
+                            </button>
+                            <br><br>
+                            <button  class ="button primary fit" onclick="clearText()" style="font-size:25px; background-color: #f2849e;">내용 지우기</button>
+
+
+
 						</div>
 					</div>
-
-				<!-- Footer -->
-					<footer id="footer">
-						<div class="inner">
-							<section>
-								<h2>Get in touch</h2>
-								<form method="post" action="#">
-									<div class="fields">
-										<div class="field half">
-											<input type="text" name="name" id="name" placeholder="Name" />
-										</div>
-										<div class="field half">
-											<input type="email" name="email" id="email" placeholder="Email" />
-										</div>
-										<div class="field">
-											<textarea name="message" id="message" placeholder="Message"></textarea>
-										</div>
-									</div>
-									<ul class="actions">
-										<li><input type="submit" value="Send" class="primary" /></li>
-									</ul>
-								</form>
-							</section>
-							<section>
-								<h2>Follow</h2>
-								<ul class="icons">
-									<li><a href="#" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="#" class="icon brands style2 fa-facebook-f"><span class="label">Facebook</span></a></li>
-									<li><a href="#" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li>
-									<li><a href="#" class="icon brands style2 fa-dribbble"><span class="label">Dribbble</span></a></li>
-									<li><a href="#" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
-									<li><a href="#" class="icon brands style2 fa-500px"><span class="label">500px</span></a></li>
-									<li><a href="#" class="icon solid style2 fa-phone"><span class="label">Phone</span></a></li>
-									<li><a href="#" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
-								</ul>
-							</section>
-							<ul class="copyright">
-								<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-							</ul>
-						</div>
-					</footer>
+							
+			
 
 			</div>
 
+			
+			
+
+
+
+
 	<%@ include file="/WEB-INF/views/include/script.jsp" %>
+	
+	
+			<!-- 텍스트박스 지우는 스크립트 -->	
+			<script type="text/javascript">
+			function clearText(){
+			/* 텍스트박스 지우는 부분 */
+			var el = document.getElementsByClassName('inp_tf');
+			for(var i=0; i<el.length; i++){
+				el[i].value = '';
+			}
+			}
+			
+			</script>
+			
+
 
 	</body>
 </html>
