@@ -35,7 +35,8 @@ h1{
 }
 
 .label{
-	font-size: 3.5vh;
+	/* font-size: 3.5vh; */
+	
 	display: flex;
 	text-align: center;
 }
@@ -74,37 +75,73 @@ h1{
 	font-size: 3.5vh;
 }
 
-/* 미디어쿼리 */
 
-@media screen and (max-width: 800px){
+/* header */
+.inner {
+    width: 100%;
+    max-width: 68em;
+    margin: 0 auto;
+    padding: 0 2.5em;
+}
+
+/* footer */
+.footersection{
+   padding-left: 3vw;
+}
+
+
+
+
+/* 미디어쿼리 */
+@media screen and (max-width: 480px){
+	/* footer */
+	.footersection{
+   		padding-left: 5vw;
+   }
+   
+	/* web이랑 글자크기 다름 */
 	.contentBox{
 		width:100%;
 		padding: 0;
-	}
-    label{
-        font-size: 1.5vh;
-    }
-    input{
-        font-size: 1.5vh;
-    }
+	}	
     
-    .formWrap{
+    .formWrap > *{
 		display:flex;
 		width: 100%;
 		align-items: center;
 		padding-bottom: 20px;
+		font-size: 1.5vh;
 	}
+		
+	.formId label{
+		font-size: 1.5vh;
+		padding-bottom: 0;
+	}
+	
+	.formPw label{
+		font-size: 1.5vh;
+		padding-bottom: 0;
+	}
+	
+	#formId,#formPw{
+		font-size: 1.5vh;
+	}
+	
 	
 	.formId,.formPw{
 		width: 100%;
 	}
 	
 	.formWrap>label{
-		width: 35%
+		width: 35%;
 	}
 	
 	.formWrap>input{
 		width: 55%;
+	}
+	
+	#font{
+		font-size: 1.5vh;
 	}
 
 /* web이랑 padding 간격 다름 */
@@ -119,11 +156,6 @@ h1{
     
     
 }
-
-@media all and (min-width:801px) and (max-width:1023px) {
-    .formWrap{
-    	font-size: 3.5vh;
-    }
     
 
-}
+

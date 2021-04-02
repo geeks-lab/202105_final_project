@@ -31,12 +31,12 @@
 			<div class="formBox">
 				<div class="form">
 					<form action="${context}/user/loginimpl" method="post" id="frm_login">
-						<div class="formId formWrap">
-							<label class="label">아이디 </label>
+						<div class="formId formWrap" id="formId">
+							<label class="label" id="font">아이디 </label>
 							<input class="input" type="text" name="userId" id="id" size="10" placeholder="아이디를 입력하세요." required/>
 						</div>
 
-						<div class="formPw formWrap">
+						<div class="formPw formWrap" id="formPw">
 							<label class="label">비밀번호 </label>
 							<input class="input" type="password" name="password" id="pw" placeholder="비밀번호를 입력하세요." required/>
 						</div>
