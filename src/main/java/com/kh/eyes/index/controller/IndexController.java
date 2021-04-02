@@ -11,4 +11,9 @@ public class IndexController {
 	public String index() {
 		return "index/index";
 	}
+	
+	@GetMapping("info")
+	public String info() {
+		return "index/info";
+	}
 }
