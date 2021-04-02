@@ -2,22 +2,16 @@
     pageEncoding="UTF-8"%>
 <%@include file="/WEB-INF/views/include/head.jsp" %>
 
-<!DOCTYPE HTML>
-<!--
-	Phantom by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
 <head>
 	<link rel="stylesheet" href="/resources/css/board.css" />
 	<style type="text/css">
-		th{
+		.list{
 			display: flex;
 			justify-content: space-between;
 		}
 		
-		th>span{
+		tr>td>span{
+			font-weight: bold;
 			text-align: center;
 		}
 		
@@ -43,17 +37,20 @@
 							</header>
 							<div class="table-wrapper">
 								<table>
-									<thead>
+									<tbody>
 										<tr>
-											<th>
+											<td class="list">
 												<span>▶ 번호<br>${board.sugIdx}</span>
 												<span>▶ 제목<br>${board.sugTitle}</span>
 												<span>▶ 등록일<br>${board.sugRegDate}</span>
 												<span>▶ 작성자<br>${board.userId}</span>
-											</th>
+											</td>
 										</tr>
-									</thead>
-									<tbody>
+										<tr style="height: 40vh">
+											<td>
+												<pre>${board.sugContent}</pre>
+											</td>
+										</tr>
 										<tr>
 											<td>
 												<ol>
@@ -64,11 +61,6 @@
 										      	</c:forEach>
 										      	</ol>
 									      	</td>
-										</tr>
-										<tr style="height: 40vh">
-											<td>
-												<pre>${board.sugContent}</pre>
-											</td>
 										</tr>
 									</tbody>
 								</table>
