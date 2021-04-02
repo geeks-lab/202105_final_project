@@ -7,46 +7,30 @@
 <html>
 <head>
 	<style type="text/css">
-	
-	.box_demo {
-	    position: relative;
-	    resize: none;
-	    height: 270px;
-	    padding: 19px 29px;
-	    border: 1px solid #30cfb3;
-	    box-sizing: border-box;
-	    }
-	    
 	 
-	.box_demo .inp_tf {
-	    width: 97%;
-	    height: 210px;
-	    border: 0 none;
-	    padding-right: 30px;
+	.inp_tf {
+		font-size:30px;
+	    min-height: 8em;
+	    width: 100%;
+	   	border: 2px solid #7bd0c1;
 	    box-sizing: border-box;
-	    font-size: 25px;
-	    line-height: 34px;
+	    line-height: 50px;
 	    color: #000;
-	    /* background: #f9f9f9; */
-		/*  -ms-overflow-style: -ms-autohiding-scrollbar; */
-	    resize: none;
+	    background: #f9f9f9; 
 	    outline: none;
-	    letter-spacing: -0.025em;
+	    
 	}
-	
 	
 	label {
 	    float: left;
 	    width: 10%;
 	    font-size : 1em;
-	    /* line-height: 1.5; */
 	}
 	
 	.inp_tf, select, form > div {
 	    display: block;
 	    margin: 0 auto;
 	    font-family: sans-serif;
-	    font-size: 16px;
 	    padding: 5px;
 	}
 	
@@ -90,11 +74,9 @@
 							</header>
 							<!-- 내용 입력칸 -->
 							<form>
-							<div class="box_demo">
-                        		 <textarea id="inp_tfDemo" class="inp_tf" rows="4" placeholder="원하는 말을 적어주세요. 대신 말해드립니다."></textarea>
-                        	</div>
+                        		 <textarea id="inp_tfDemo" class="inp_tf" rows="4" placeholder="원하는 말을 적어주세요. 대신 말해드립니다." ></textarea>
 							<br>
-							
+					
 								<!-- 속도, 피치 -->
 							    <div>
 							      <label for="rate">속도</label><input type="range" min="0.5" max="2" value="1" step="0.1" id="rate">
@@ -112,7 +94,7 @@
 							   	<br>
 							   	<!-- 음성듣기 / 내용지우기 버튼 -->
 							    <div class="controls">
-							      <button class="button primary fit" id="play" type="submit" style="font-size:25px; background-color: #30cfb3;">▶ 음성듣기</button>
+							      <button class="button primary fit" id="play" type="submit" style="font-size:25px; background-color: #7bd0c1;">▶ 음성듣기</button>
 							    </div>
 							    <br>
 							   <button  class ="button primary fit" onclick="clearText()" style="font-size:25px; background-color: #f2849e;">내용 지우기</button>
@@ -209,7 +191,6 @@
 	<!-- 텍스트박스 지우는 스크립트 -->	
 	<script type="text/javascript">
 	function clearText(){
-	/* 텍스트박스 지우는 부분 */
 	var el = document.getElementsByClassName('inp_tf');
 	for(var i=0; i<el.length; i++){
 		el[i].value = '';
