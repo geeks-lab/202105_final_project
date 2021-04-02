@@ -3,11 +3,7 @@
 <%@ include file="/WEB-INF/views/include/head.jsp" %>
 
 <!DOCTYPE HTML>
-<!--
-	Phantom by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
+
 <html>
 <head>
 	<style type="text/css">
@@ -111,10 +107,9 @@
 							      <div class="pitch-value">1</div>
 							      <div class="clearfix"></div>
 							    </div>
-							    <br>
-							    <!-- 한국어 지원 -->
-							    <select><option data-lang="ko-KR" data-name="Microsoft Heami - Korean (Korean)" >마이크로소프트 Heami - 한국어 (한국어) (ko-KR) - 디폴트</option></select>
-							   	<br><br>
+							    <!-- 한국어 지원  :  화면에서는 안보이게 숨겨둠-->
+							   <select style="display:none"><option data-lang="ko-KR" data-name="Microsoft Heami - Korean (Korean)">마이크로소프트 Heami - 한국어 (한국어) (ko-KR) - 디폴트</option></select> 
+							   	<br>
 							   	<!-- 음성듣기 / 내용지우기 버튼 -->
 							    <div class="controls">
 							      <button class="button primary fit" id="play" type="submit" style="font-size:25px; background-color: #30cfb3;">▶ 음성듣기</button>
