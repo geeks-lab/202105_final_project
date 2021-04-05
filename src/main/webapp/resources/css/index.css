@@ -27,8 +27,11 @@
 .icons>li>a{
 	width: 80vw !important;
 }
-.footersection{
-	padding-left: 3vw;
+#wrapper > * > .inner {
+    width: 100%;
+    max-width: 68em;
+    margin: 0 auto;
+    padding: 0 0.0em !important;
 }
 
 @media screen and (max-width: 480px) {
