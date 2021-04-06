@@ -9,14 +9,17 @@
 }
 
 .content_wrapper{
-	padding-left: 3em;
+	padding-left: 1em;
 }
 
 h1{
-	font-size: 1.8em !important;	
+	font-size: 1.8em !important;
+	font-weight: 500 !important;	
+	margin: 0 0 0.5em 0 !important;
 }
 h2{
-	font-size: 1.3em !important; 
+	font-size: 1.3em !important;
+	font-weight: 300 !important;
 }
 
 .individual{
@@ -34,13 +37,13 @@ ol, ul, li {
 .head li {
     float: left;
     position: relative;
-    width: 192px;
-    height: 192px;
+    width: 172px;
+    height: 172px;
     margin: 0 0 80px 49px;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
-    font-size: 1.1em;
+    font-size: 0.9em;
     font-weight: 550;
     color: white;
     text-align: center;
@@ -88,14 +91,14 @@ ul {
 .head .num {
     display: block;
     padding: 2em 0 1em;
-    font-size: 1.3em;
+    font-size: 1.2em;
     font-weight: 800;
 }
 
 .head .arr {
     position: absolute;
     top: 82px;
-    right: -2.1em;
+    right: -1.7em;
     width: 0.8em;
     height: 1.8em;
     background-image: url("../../../resources/images/chevron-right.png") ;
@@ -103,7 +106,7 @@ ul {
     background-size:contain;
 }
 .individual_wrapper_02>ul>li{
-	margin-left: 8em;
+	margin-left: 7em;
 }
 
 .individual_wrapper_02 .head .arr {
@@ -116,6 +119,16 @@ ul {
     background-repeat: no-repeat;
     background-size:contain;
 }
+
+*, *:before, *:after {
+    box-sizing: content-box;
+}
+
+/* main 에 잡혀있는거 풀기위해서 */
+ul li {
+    padding-left: 0em !important;
+}
+
 
 /* 내부스타일시트에서는 미디어쿼리 안듣나? */
 @media screen and (max-width:480px){
@@ -134,5 +147,5 @@ ul {
 	    color: #3c3c3c;
 	    text-align: center;
 	}
-}
+
 }
