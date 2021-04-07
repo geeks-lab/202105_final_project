@@ -55,10 +55,10 @@
 		
 			let login = () => {
 				
-				const url = '/member/loginimpl';
+				const url = '/user/loginimpl';
 				let params = {};
 				params.userId = id.value;
-				params.password = pw.value;
+				params.userPwd = pw.value;
 		
 				//post방식으로 진행
 				//헤더 설정

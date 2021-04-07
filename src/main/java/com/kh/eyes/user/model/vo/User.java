@@ -30,90 +30,57 @@ public class User {
 	 */
 	
 	private String userId;
-	private String password;
-	private String email;
-	private String grade;
-	private String tell;
-	private Date regDate;
-	private Date rentableDate;
-	private int isLeave;
+	private String userPwd;
+	private String userName;
 	
-	public User() {
-		
-	}
-
+	
 	public String getUserId() {
 		return userId;
 	}
+
+
+
 
 	public void setUserId(String userId) {
 		this.userId = userId;
 	}
 
-	public String getPassword() {
-		return password;
+
+
+
+	public String getUserPwd() {
+		return userPwd;
 	}
 
-	public void setPassword(String password) {
-		this.password = password;
+
+
+
+	public void setUserPwd(String userPwd) {
+		this.userPwd = userPwd;
 	}
 
-	public String getEmail() {
-		return email;
+
+
+
+	public String getUserName() {
+		return userName;
 	}
 
-	public void setEmail(String email) {
-		this.email = email;
+
+
+
+	public void setUserName(String userName) {
+		this.userName = userName;
 	}
 
-	public String getGrade() {
-		return grade;
-	}
 
-	public void setGrade(String grade) {
-		this.grade = grade;
-	}
 
-	public String getTell() {
-		return tell;
-	}
-
-	public void setTell(String tell) {
-		this.tell = tell;
-	}
-
-	public Date getRegDate() {
-		return regDate;
-	}
-
-	public void setRegDate(Date regDate) {
-		this.regDate = regDate;
-	}
-
-	public Date getRentableDate() {
-		return rentableDate;
-	}
-
-	public void setRentableDate(Date rentableDate) {
-		this.rentableDate = rentableDate;
-	}
-
-	public int getIsLeave() {
-		return isLeave;
-	}
-
-	public void setIsLeave(int isLeave) {
-		this.isLeave = isLeave;
-	}
 
 	@Override
 	public String toString() {
-		return "Member [userId=" + userId + ", password=" + password + ", email=" + email + ", grade=" + grade
-				+ ", tell=" + tell + ", regDate=" + regDate + ", rentableDate=" + rentableDate + ", isLeave=" + isLeave
-				+ "]";
+		return "User [userId=" + userId + ", userPwd=" + userPwd + ", userName=" + userName + "]";
 	}
-	
-	
+
 	
 	
 	

@@ -2,6 +2,7 @@ package com.kh.eyes.user.validator;
 
 import java.util.regex.Pattern;
 
+
 import org.springframework.stereotype.Component;
 import org.springframework.validation.Errors;
 import org.springframework.validation.Validator;
@@ -38,17 +39,8 @@ public class MemberValidator implements Validator{
 		//2. 비밀번호가 8글자 이상의 숫자,영문자,특수문자 조합인지
 		Pattern pattern = Pattern.compile("^(?!.*[ㄱ-힣])(?=.*\\W)(?=.*\\d)(?=.*[a-zA-Z])(?=.{8,})");
 	
-		if(!pattern.matcher(member.getPassword()).find()) {
-			errors.rejectValue("password", "error.password", "비밀번호는 영어,숫자,특수문자 조합의 8글자 이상인 문자입니다.");
-		}
-		//3. 이메일 존재 유무
-		if(memberRepository.selectMemberByEmail(member.getEmail()) > 0) {
-			errors.rejectValue("email", "error.email", "이미 존재하는 이메일입니다.");
-		}
-		
-		//4. 휴대폰 존재 유무
-		if(memberRepository.selectMemberByTell(member.getTell()) > 0) {
-			errors.rejectValue("tell", "error.tell", "이미 존재하는 휴대폰 번호입니다.");
+		if(!pattern.matcher(member.getUserPwd()).find()) {
+			errors.rejectValue("userPwd", "error.userPwd", "비밀번호는 영어,숫자,특수문자 조합의 8글자 이상인 문자입니다.");
 		}
 		
 	}

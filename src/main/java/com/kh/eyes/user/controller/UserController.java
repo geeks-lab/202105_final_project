@@ -89,36 +89,36 @@ public class UserController {
 	@GetMapping("idcheck")
 	@ResponseBody
 	public String idcheck(String userId) {
-		if(memberService.selectMemberById(userId) != null) {
+		if(memberService.selectMemberById(userId).equals(userId)) {
 			return "fail";
 		}
 		return "success";
 	}
 	
-	@PostMapping("mailauth")
-	public String authenticateEmail(@Valid User persistInfo
-							, Errors error //반드시 @Valid 변수 바로 뒤에 작성
-							, HttpSession session
-							, Model model) {
-		if(error.hasErrors()) {
-			return "member/join";
-		}
-		
-		String authPath = UUID.randomUUID().toString();
-		
-		//session에 persistInfo 저장
-		session.setAttribute("persistInfo", persistInfo);
-		session.setAttribute("authPath", authPath);
-		
-		//memberService의 authenticateEmail 호출해서 회원가입 메일 발송
-		//memberService.authenticateEmail(persistInfo, authPath);
-		
-		//메일발송 안내창 출력 후 index 페이지로 페이지 이동
-		model.addAttribute("msg", "이메일 발송이 완료되었습니다.");
-		model.addAttribute("url", "/index");
-		
-		return "common/result";
-	}
+//	@PostMapping("mailauth")
+//	public String authenticateEmail(@Valid User persistInfo
+//							, Errors error //반드시 @Valid 변수 바로 뒤에 작성
+//							, HttpSession session
+//							, Model model) {
+//		if(error.hasErrors()) {
+//			return "member/join";
+//		}
+//		
+//		String authPath = UUID.randomUUID().toString();
+//		
+//		//session에 persistInfo 저장
+//		session.setAttribute("persistInfo", persistInfo);
+//		session.setAttribute("authPath", authPath);
+//		
+//		//memberService의 authenticateEmail 호출해서 회원가입 메일 발송
+//		//memberService.authenticateEmail(persistInfo, authPath);
+//		
+//		//메일발송 안내창 출력 후 index 페이지로 페이지 이동
+//		model.addAttribute("msg", "이메일 발송이 완료되었습니다.");
+//		model.addAttribute("url", "/index");
+//		
+//		return "common/result";
+//	}
 	
 	@GetMapping("joinimpl/{authPath}")
 	public String joinImpl(HttpSession session
@@ -143,9 +143,6 @@ public class UserController {
 	public String login() {
 		return "user/login";
 	}
-	
-	
-	
 	
 	
 	@PostMapping("loginimpl")

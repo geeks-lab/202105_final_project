@@ -37,6 +37,7 @@
 						
 						<div class="idCheck formWrap">
 							<button type="button" onclick="idCheck()">중복확인</button>
+							<form:errors path="userId" cssClass="valid_info"/>
 						</div>
 
 						<div class="formPw formWrap">
@@ -71,7 +72,7 @@
 			 let userId = id.value;
 			 if(userId){
 			 
-			  fetch("/member/idcheck?userId=" + userId,{
+			  fetch("/user/idcheck?userId=" + userId,{
 			   method:"get"
 			  })
 			  .then(response => response.text())
