@@ -1,6 +1,9 @@
-@charset "UTF-8";
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+<style type="text/css">
 
-/* 헤더 패딩 안먹길래 걍 추가 */
 .inner {
     width: 100%;
     margin: 0 2em;
@@ -9,17 +12,14 @@
 }
 
 .content_wrapper{
-	padding-left: 1em;
+	padding-left: 3em;
 }
 
 h1{
-	font-size: 1.8em !important;
-	font-weight: 500 !important;	
-	margin: 0 0 0.5em 0 !important;
+	font-size: 1.8em !important;	
 }
 h2{
-	font-size: 1.3em !important;
-	font-weight: 300 !important;
+	font-size: 1.3em !important; 
 }
 
 .individual{
@@ -37,13 +37,13 @@ ol, ul, li {
 .head li {
     float: left;
     position: relative;
-    width: 172px;
-    height: 172px;
+    width: 192px;
+    height: 192px;
     margin: 0 0 80px 49px;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
-    font-size: 0.9em;
+    font-size: 1.1em;
     font-weight: 550;
     color: white;
     text-align: center;
@@ -91,14 +91,14 @@ ul {
 .head .num {
     display: block;
     padding: 2em 0 1em;
-    font-size: 1.2em;
+    font-size: 1.3em;
     font-weight: 800;
 }
 
 .head .arr {
     position: absolute;
     top: 82px;
-    right: -1.7em;
+    right: -2.1em;
     width: 0.8em;
     height: 1.8em;
     background-image: url("../../../resources/images/chevron-right.png") ;
@@ -120,16 +120,6 @@ ul {
     background-size:contain;
 }
 
-*, *:before, *:after {
-    box-sizing: content-box;
-}
-
-/* main 에 잡혀있는거 풀기위해서 */
-ul li {
-    padding-left: 0em !important;
-}
-
-
 /* 내부스타일시트에서는 미디어쿼리 안듣나? */
 @media screen and (max-width:480px){
 	.head li {
@@ -147,5 +137,40 @@ ul li {
 	    color: #3c3c3c;
 	    text-align: center;
 	}
-
 }
+
+</style>
+</head>
+	<body class="is-preload">
+		<!-- Main -->
+		<div class="main_wrapper inner">
+			<h1>서비스 이용방법</h1>
+			<div class="content_wrapper">
+				<div class="individual individual_wrapper_01">
+				<h2>
+					이미지 인식을 통한 제품 알아보기
+				</h2>
+				<ul class="head">
+	              <li class="li_01"><span class="num">01</span>제품 찾기 선택<span class="arr"></span></li>
+	              <li class="li_02"><span class="num">02</span>카메라 촬영<span class="arr"></span></li>
+	              <li class="li_03"><span class="num">03</span>음성으로 결과 확인<span class="arr"></span></li>
+	              <li class="li_04"><span class="num">04</span>상세내용 버튼 선택<span class="arr"></span></li>
+	              <li class="li_05"><span class="num">05</span>상세내용 결과 확인</li>
+	            </ul>
+				</div>
+				<div class="individual individual_wrapper_02">
+				<h2>
+					목소리 되어주기 기능 이용하기
+				</h2>
+				<ul class="head">
+	              <li class="li_01"><span class="num">01</span>목소리 되어주기 선택<span class="arr"></span></li>
+	              <li class="li_02"><span class="num">02</span>내용 기입<span class="arr"></span></li>
+	              <li class="li_03"><span class="num">03</span>음성듣기 버튼 선택<span class="arr"></span></li>
+	              <li class="li_04"><span class="num">04</span>AI음성 결과 확인</li>
+	            </ul>
+				</div>
+			</div>
+		</div>
+
+	</body>
+</html>
