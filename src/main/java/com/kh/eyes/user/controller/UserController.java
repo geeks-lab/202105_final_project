@@ -13,10 +13,12 @@ import org.springframework.validation.Errors;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.InitBinder;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.SessionAttribute;
 
@@ -26,31 +28,8 @@ import com.kh.eyes.user.model.service.UserService;
 import com.kh.eyes.user.model.vo.User;
 import com.kh.eyes.user.validator.MemberValidator;
 
-//1. 해당 클래스를 applicationContext에 빈으로 등록
-//2. Controller와 관련된 annotation을 사용할 수 있게 해준다.
-//	@RequestMapping : 컨트롤러의 메서드와 매핑시킬 요청 url을 지정, http method 상관없음
-//	@GetMapping : 컨트롤러의 메서드와 매핑시킬 요청 url을 지정 get method만 매핑
-//	@PostMapping : 컨트롤러의 메서드와 매핑시킬 요청 url을 지정 post method만 매핑
-//	@RequestParam : 요청 파마리터를 컨트롤러 메서드의 매개변수에 바인드
-//					FormHttpRequestConverter가 동작, Content-type : form-url-encoded
-//					속성 >> name : 요청파라미터명, 컨트롤러메서드의 매개변수명과 요청파라미터명이 같으면 생략 가능
-//						required : 필수 여부 default : true
-//						defaultValue : 파라미터가 없거나, 빈 값이 넘어왔을 때 세팅할 기본 값
-//						value : name alias ex) @RequestParam("userId")
-//	@RequestBody : json 포맷으로 넘어온 요청 바디를 읽어서 자바의 객체에 바인드
-//				MappingJacksonHttpMessageConverter가 동작 Content-type : application/json
-//	@ModelAttribute : 요청 파라미터를 VO에 바인드, VO에 바인드함과 동시에 Model에 VO를 담는다.
-//	@SessionAttribute : 원하는 Session의 속성을 컨트롤러의 매개변수에 바인드
-//	@CookieValue : 원하는 Cookie의 값을 컨트롤러의 매개변수에 바인드
-//	@PathVariable : url 템플릿에 담긴 파라미터값을 컨트롤러의 매개변수에 바인드
-//	@ResponseBody : 컨트롤러의 메서드 위에 작성, 메서드가 반환하는 값을 응답바디에 직접 넣어준다.
-
-// *** Servlet 객체(HttpServletRequest, HttpServletResponse, HttpSession)들을
-//	컨트롤러 메서드의 매개변수로 전달받을 수 있다.
-//	HttpEntity, RequestEntity, ResponseEntity
-
 @Controller
-@RequestMapping("user")
+@RequestMapping("/user")
 public class UserController {
 	
 	Logger logger = LoggerFactory.getLogger(this.getClass());
@@ -81,55 +60,27 @@ public class UserController {
 	 * public void member() {};
 	 */
 	
-	@GetMapping("join")
+	@GetMapping("/join")
 	public String boardForm() {
 		return "user/join";
 	}
 	
-	@GetMapping("idcheck")
+	@GetMapping("/idCheck")
 	@ResponseBody
 	public String idcheck(String userId) {
-		if(memberService.selectMemberById(userId).equals(userId)) {
+		if(memberService.selectMemberById(userId) != null) {
 			return "fail";
 		}
+		
 		return "success";
 	}
 	
-//	@PostMapping("mailauth")
-//	public String authenticateEmail(@Valid User persistInfo
-//							, Errors error //반드시 @Valid 변수 바로 뒤에 작성
-//							, HttpSession session
-//							, Model model) {
-//		if(error.hasErrors()) {
-//			return "member/join";
-//		}
-//		
-//		String authPath = UUID.randomUUID().toString();
-//		
-//		//session에 persistInfo 저장
-//		session.setAttribute("persistInfo", persistInfo);
-//		session.setAttribute("authPath", authPath);
-//		
-//		//memberService의 authenticateEmail 호출해서 회원가입 메일 발송
-//		//memberService.authenticateEmail(persistInfo, authPath);
-//		
-//		//메일발송 안내창 출력 후 index 페이지로 페이지 이동
-//		model.addAttribute("msg", "이메일 발송이 완료되었습니다.");
-//		model.addAttribute("url", "/index");
-//		
-//		return "common/result";
-//	}
 	
-	@GetMapping("joinimpl/{authPath}")
+	@PostMapping("/joinimpl")
 	public String joinImpl(HttpSession session
-			,@PathVariable String authPath
-			,@SessionAttribute("authPath") String sessionPath
-			,@SessionAttribute("persistInfo") User persistInfo
+			,@ModelAttribute User persistInfo
 			,Model model) {
-		
-		if(!authPath.equals(sessionPath)) {
-			throw new ToAlertException(ErrorCode.AUTH02);
-		}
+		System.out.println(persistInfo);
 		memberService.insertMember(persistInfo);
 		model.addAttribute("msg","회원가입이 완료되었습니다.");
 		model.addAttribute("url", "/index");
@@ -139,7 +90,7 @@ public class UserController {
 		
 	}
 	
-	@GetMapping("login")
+	@GetMapping("/login")
 	public String login() {
 		return "user/login";
 	}
@@ -159,14 +110,14 @@ public class UserController {
 		return "success";
 	}
 	
-	@GetMapping("logout")
+	@GetMapping("/logout")
 	public String logout(HttpSession session) {
 		session.removeAttribute("userInfo");
 		//redirect 사용해보기
 		return "redirect:/index";
 	}
 	
-	@GetMapping("mypage")
+	@GetMapping("/mypage")
 	public void mypage() {};
 	
 	

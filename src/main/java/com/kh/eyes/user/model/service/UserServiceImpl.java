@@ -32,7 +32,7 @@ public class UserServiceImpl implements UserService{
 	@Override
 	public int insertMember(User member) {
 		
-		member.setUserPwd(passwordEncoder.encode(member.getUserPwd()));
+		member.setPw(passwordEncoder.encode(member.getUserPwd()));
 		return memberRepository.insertMember(member);
 	}
 
@@ -40,12 +40,15 @@ public class UserServiceImpl implements UserService{
 	public User authenticateUser(User member) {
 
 		User userInfo = memberRepository.selectMemberForAuth(member.getUserId());
-		
+		System.out.println(userInfo);
+		System.out.println(member);
 		if(userInfo == null || 
 				!passwordEncoder.matches(member.getUserPwd(), userInfo.getUserPwd())) {
+			System.out.println("????");
 			return null;
 		}
 		return userInfo;
 	}
+	
 
 }

@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-   pageEncoding="UTF-8"%>
-<%@ include file="/WEB-INF/views/include/head.jsp" %>
+	pageEncoding="UTF-8"%>
+<%@ include file="/WEB-INF/views/include/head.jsp"%>
 
 <!DOCTYPE HTML>
 <!--
@@ -10,48 +10,50 @@
 -->
 <html>
 <head>
-	<title>로그인</title>
-	<meta name="viewport" content="width=device-width,initial-scale=1, user-scalable=no">
-	<link rel="stylesheet" href="/resources/assets/css/main.css">
-	<link rel="stylesheet" href="/resources/assets/css/noscript.css">
-	<link rel="stylesheet" href="/resources/assets/css/fontawesome-all.min.css">
-	<link rel="stylesheet" href="/resources/css/login.css">
+<title>로그인</title>
+<meta name="viewport"
+	content="width=device-width,initial-scale=1, user-scalable=no">
+<link rel="stylesheet" href="/resources/assets/css/main.css">
+<link rel="stylesheet" href="/resources/assets/css/noscript.css">
+<link rel="stylesheet"
+	href="/resources/assets/css/fontawesome-all.min.css">
+<link rel="stylesheet" href="/resources/css/login.css">
 </head>
 <body>
 	<!-- Header -->
-	<%@ include file="/WEB-INF/views/include/header.jsp" %>
-	
-	<!-- section -->
-		<section class="contentBox" id="contentBox">
-			<div class="titleBox">
-				<h1>로그인</h1>
-				<hr>
-			</div>
-			
-			<div class="formBox">
-				<div class="form">
-					<form action="${context}/user/loginimpl" method="post" id="frm_login">
-						<div class="formId formWrap" id="formId">
-							<label class="label" id="font">아이디 </label>
-							<input class="input" type="text" name="userId" id="id" size="10" placeholder="아이디를 입력하세요." required/>
-						</div>
+	<%@ include file="/WEB-INF/views/include/header.jsp"%>
 
-						<div class="formPw formWrap" id="formPw">
-							<label class="label">비밀번호 </label>
-							<input class="input" type="password" name="password" id="pw" placeholder="비밀번호를 입력하세요." required/>
-						</div>
-			
-						<div class="submit">
-							<button type="submit" class="primary">로그인</button>
-						</div>
-					</form>
+	<!-- section -->
+	<section class="contentBox" id="contentBox">
+		<div class="titleBox">
+			<h1>로그인</h1>
+			<hr>
+		</div>
+
+		<div class="formBox">
+			<div class="form">
+				<div class="formId formWrap" id="formId">
+					<label class="label" id="font">아이디 </label> <input class="input"
+						type="text" name="userId" id="id" size="10"
+						placeholder="아이디를 입력하세요." required />
+				</div>
+
+				<div class="formPw formWrap" id="formPw">
+					<label class="label">비밀번호 </label> <input class="input"
+						type="password" name="password" id="pw" placeholder="비밀번호를 입력하세요."
+						required />
+				</div>
+
+				<div class="submit">
+					<button onclick="login()">로그인</button>
 				</div>
 			</div>
-		</section>
-		
-		
-   
- 		<script type="text/javascript">
+		</div>
+	</section>
+
+
+
+	<script type="text/javascript">
 		
 			let login = () => {
 				
@@ -93,12 +95,12 @@
 			}
 	
 	</script>
-	
+
 	<!-- Footer -->
-	<%@ include file="/WEB-INF/views/include/footer.jsp" %>
-		
-		
-   <%@ include file="/WEB-INF/views/include/script.jsp" %>
+	<%@ include file="/WEB-INF/views/include/footer.jsp"%>
+
+
+	<%@ include file="/WEB-INF/views/include/script.jsp"%>
 
 </body>
 </html>

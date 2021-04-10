@@ -41,11 +41,14 @@ public class User {
 
 
 
-	public void setUserId(String userId) {
+	public void setId(String userId) {
 		this.userId = userId;
 	}
 
 
+	public void setUserId(String userId) {
+		this.userId = userId;
+	}
 
 
 	public String getUserPwd() {
@@ -55,7 +58,12 @@ public class User {
 
 
 
-	public void setUserPwd(String userPwd) {
+	public void setPw(String userPwd) {
+		this.userPwd = userPwd;
+	}
+	
+
+	public void setPassword(String userPwd) {
 		this.userPwd = userPwd;
 	}
 
@@ -69,7 +77,7 @@ public class User {
 
 
 
-	public void setUserName(String userName) {
+	public void setName(String userName) {
 		this.userName = userName;
 	}
 

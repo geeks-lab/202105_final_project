@@ -39,13 +39,13 @@
 								<h3>불편한 당신의 눈을 대신해드립니다</h3>
 							</header>
 						
-								<div class="welcome">${sessionScope.userInfo.name} 님, 환영합니다!</div>
+								<div class="welcome">${sessionScope.userInfo.userName} 님, 환영합니다!</div>
 								<hr>
 								<br>
 								<br>
 						        <div class="jumbotron">
 						        	<h3>아이디 : ${sessionScope.userInfo.userId}</h3><br>
-						        	<h3>이름 : ${sessionScope.userInfo.tel}</h3><br><br>
+						        	<h3>이름 : ${sessionScope.userInfo.userName}</h3><br><br>
 						        </div>
 							<button class="button primary fit" onclick="location.href='/board/list'" style="background-color:#9370DB; width:100%">고객의 소리함 바로가기</button>
 						</div>

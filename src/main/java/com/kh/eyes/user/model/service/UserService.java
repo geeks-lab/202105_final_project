@@ -7,4 +7,5 @@ public interface UserService {
 	User selectMemberById(String userId);
 	int insertMember(User member);
 	User authenticateUser(User member);
+	
 }

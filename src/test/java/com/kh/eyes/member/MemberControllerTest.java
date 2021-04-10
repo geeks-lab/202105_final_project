@@ -37,14 +37,14 @@ public class MemberControllerTest {
 	@Test
 	public void joinTest() throws Exception {
 		mockMvc
-		.perform(get("/member/join"))
+		.perform(get("/user/join"))
 		.andDo(print());
 	}
 	
 	@Test
 	public void idCheckTest() throws Exception {
 		mockMvc
-		.perform(get("/member/idcheck")
+		.perform(get("/user/idcheck")
 				.param("userId", "testUser"))
 		.andDo(print());
 	}
@@ -52,11 +52,10 @@ public class MemberControllerTest {
 	@Test
 	public void authenticateEmailTest() throws Exception {
 		mockMvc
-		.perform(post("/member/mailauth")
+		.perform(post("/user/mailauth")
 				.param("userId", "testUser")
-				.param("password", "1234")
-				.param("email", "jihyon2775@naver.com")
-				.param("tell", "010-0000-0000"))
+				.param("userPwd", "1234")
+				.param("userName", "이머랭"))
 		.andDo(print());
 	}
 	
