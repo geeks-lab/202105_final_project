@@ -42,8 +42,8 @@ public class MybatisTest {
 	public void insertWithVo() {
 		User member = new User();
 		member.setUserId("수업진짜");
-		member.setUserPwd("하는중");
-		member.setUserName("이머랭");
+		member.setPw("하는중");
+		member.setName("이머랭");
 		mybatisRepository.insertWithVo(member);
 	}
 	
@@ -63,7 +63,7 @@ public class MybatisTest {
 	public void update() {
 		User member = new User();
 		member.setUserId(userId);
-		member.setUserPwd("동해물과백두산이");
+		member.setPw("동해물과백두산이");
 		mybatisRepository.update(member);
 	}
 	
@@ -108,7 +108,7 @@ public class MybatisTest {
 		//	[update tb_member set password = 1234, email = 'aa@aa.com' where userId = 'aa']
 		User member = new User();
 		member.setUserId(userId);
-		member.setUserName("이머랭");
+		member.setName("이머랭");
 		mybatisRepository.dynamicQuerySetTag(member);
 	}
 	
