@@ -27,7 +27,7 @@
 								<h3>불편한 당신의 눈을 대신해드립니다</h3>
 							</header>
 						
-								<div class="welcome">${sessionScope.userInfo.userName} 님, 환영합니다!</div>
+								<div style="font-size: 30px; font-family: Source Sans Pro, Helvetica, sans-serif; text-align: left;">${sessionScope.userInfo.userName} 님, 환영합니다!</div>
 								<hr>
 								<br>
 								<br>
