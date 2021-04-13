@@ -9,7 +9,7 @@
 		<%@ include file="/WEB-INF/views/include/header.jsp" %>
 		
 		<!-- Main -->
-		<div class="main_wrapper inner">
+		<div class="main_wrapper info_inner">
 			<h1>서비스 이용방법</h1>
 			<div class="content_wrapper">
 				<div class="individual individual_wrapper_01">
