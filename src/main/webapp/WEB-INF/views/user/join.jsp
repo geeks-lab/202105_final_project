@@ -3,13 +3,10 @@
 <%@ include file="/WEB-INF/views/include/head.jsp" %>
 <head>
 	<title>회원가입</title>
-	<meta name="viewport" content="width=device-width,initial-scale=1, user-scalable=no">
-	<link rel="stylesheet" href="/resources/assets/css/main.css">
-	<link rel="stylesheet" href="/resources/assets/css/noscript.css">
-	<link rel="stylesheet" href="/resources/assets/css/fontawesome-all.min.css">
 	<link rel="stylesheet" href="/resources/css/join.css">
 </head>
-<body>
+<body class="is-preload">
+<div id="wrapper">
 	<!-- Header -->
 	<%@ include file="/WEB-INF/views/include/header.jsp" %>
 	
@@ -55,7 +52,7 @@
 				</div>
 			</div>
 		</section>
-   
+   </div>
    <!-- js -->
 		<script type="text/javascript">
 		
