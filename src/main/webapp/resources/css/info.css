@@ -1,6 +1,11 @@
 @charset "UTF-8";
 
-/* 헤더 패딩 안먹길래 걍 추가 */
+.inner{
+	width: 100%;
+    margin: 0 2em;
+    padding: 0 2.5em;
+}
+
 .info_inner {
     width: 100%;
     margin: 0 2em;
