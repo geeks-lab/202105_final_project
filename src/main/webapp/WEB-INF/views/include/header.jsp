@@ -30,6 +30,7 @@
 			<c:choose>
 				<c:when test="${not empty sessionScope.userInfo.userId}">
 					<li><a href="/user/mypage">마이페이지</a></li>	
+					<li><a href="/user/logout">로그아웃</a></li>	
 				</c:when>
 				<c:otherwise>
 			   		<li><a href="/user/login">로그인</a></li>
