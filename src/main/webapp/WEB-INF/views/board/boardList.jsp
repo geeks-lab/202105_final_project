@@ -41,7 +41,12 @@
 								<p>접수된 고객 건의 사항 목록입니다.</p>
 							</header>
 						    <div class="table-wrapper">
-						    	<a href="${context}/board/form" class="button primary fit" style="background-color: #9370DB">건의 글 작성</a>
+						    	<c:if test="${sessionScope.userInfo.userId ne 'admin' && !empty sessionScope.userInfo.userId}">
+						    		<a href="${context}/board/form" class="button primary fit" style="background-color: #9370DB">건의 글 작성</a>
+						    	</c:if>
+						    	<c:if test="${empty sessionScope.userInfo.userId}">
+						    		<div style="text-align: right"><small>* 건의 사항을 작성하려면 로그인 해주세요.</small></div>
+						    	</c:if>
 						    	<br><br>
 								<table style="text-align: center">
 									<thead>
