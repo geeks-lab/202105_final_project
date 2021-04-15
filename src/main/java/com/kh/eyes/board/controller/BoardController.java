@@ -19,6 +19,8 @@ import org.springframework.web.multipart.MultipartFile;
 
 import com.kh.eyes.board.model.service.BoardService;
 import com.kh.eyes.board.model.vo.Board;
+import com.kh.eyes.common.code.ErrorCode;
+import com.kh.eyes.common.exception.ToAlertException;
 import com.kh.eyes.common.util.file.FileVo;
 import com.kh.eyes.user.model.vo.User;
 
@@ -59,9 +61,17 @@ public class BoardController {
 	}
 	
 	@GetMapping("detail")
-	public String boardDetail(String sugIdx, Model model) {
-		model.addAllAttributes(boardService.selectBoardDetail(sugIdx));
-		return "board/boardView";
+	public String boardDetail(String sugIdx, Model model
+			,@SessionAttribute(name = "userInfo", required = false) User user) {
+		
+		String userId = user == null? "guest" : user.getUserId();
+		
+		if(userId.equals("admin")) {
+			model.addAllAttributes(boardService.selectBoardDetail(sugIdx));
+			return "board/boardView";
+		}
+		return "redirect:/board/list";
+
 	}
 	
 	@GetMapping("download")
