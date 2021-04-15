@@ -9,9 +9,10 @@
 		<%@ include file="/WEB-INF/views/include/header.jsp" %>
 		
 		<!-- Main -->
-		<div class="main_wrapper info_inner">
-			<h1>서비스 이용방법</h1>
+		<div class="wrapper info_inner">
+			
 			<div class="content_wrapper">
+			<h1>서비스 이용방법</h1>
 				<div class="individual individual_wrapper_01">
 				<h2>
 					이미지 인식을 통한 제품 알아보기
