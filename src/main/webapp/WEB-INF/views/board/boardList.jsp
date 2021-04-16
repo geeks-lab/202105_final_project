@@ -61,7 +61,7 @@
 										<c:forEach items="${boardList}" var="board">
 											<tr>
 												<td>${board.sugIdx}</td>
-												<td><a href="${context}/board/detail?sugIdx=${board.sugIdx}">${board.sugTitle}</a></td>
+												<td><a href="${context}/board/detail?sugIdx=${board.sugIdx}&userId=${board.userId}">${board.sugTitle}</a></td>
 												<td>${board.userId}</td>
 												<td>${board.sugRegDate}</td>
 											</tr>

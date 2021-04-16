@@ -61,15 +61,16 @@ public class BoardController {
 	}
 	
 	@GetMapping("detail")
-	public String boardDetail(String sugIdx, Model model
+	public String boardDetail(String sugIdx, String userId ,Model model
 			,@SessionAttribute(name = "userInfo", required = false) User user) {
 		
-		String userId = user == null? "guest" : user.getUserId();
+		String sessionUserId = user.getUserId();
 		
-		if(userId.equals("admin")) {
+		if(sessionUserId.equals("admin") || userId.equals(sessionUserId)) {
 			model.addAllAttributes(boardService.selectBoardDetail(sugIdx));
 			return "board/boardView";
 		}
+		
 		return "redirect:/board/list";
 
 	}
