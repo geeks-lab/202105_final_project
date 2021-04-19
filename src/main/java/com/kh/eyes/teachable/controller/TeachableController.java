@@ -17,5 +17,9 @@ public class TeachableController {
 	public String product() {
 		return "teachable/teachProduct";
 	}
-
+	
+	@GetMapping("jiyoungtest")
+	public String jiyoungtest() {
+		return "teachable/teachProduct_jiyoung";
+	}
 }
