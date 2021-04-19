@@ -19,8 +19,6 @@ import org.springframework.web.multipart.MultipartFile;
 
 import com.kh.eyes.board.model.service.BoardService;
 import com.kh.eyes.board.model.vo.Board;
-import com.kh.eyes.common.code.ErrorCode;
-import com.kh.eyes.common.exception.ToAlertException;
 import com.kh.eyes.common.util.file.FileVo;
 import com.kh.eyes.user.model.vo.User;
 
@@ -64,14 +62,24 @@ public class BoardController {
 	public String boardDetail(String sugIdx, String userId ,Model model
 			,@SessionAttribute(name = "userInfo", required = false) User user) {
 		
-		String sessionUserId = user.getUserId();
-		
-		if(sessionUserId.equals("admin") || userId.equals(sessionUserId)) {
-			model.addAllAttributes(boardService.selectBoardDetail(sugIdx));
-			return "board/boardView";
+		if(user != null) {
+			String sessionUserId = user.getUserId();
+			
+			if(sessionUserId.equals("admin") || userId.equals(sessionUserId)) {
+				model.addAllAttributes(boardService.selectBoardDetail(sugIdx));
+				return "board/boardView";
+			}
+		} else {
+			model.addAttribute("msg","로그인 후 열람 가능합니다.");
+			model.addAttribute("url", "/board/list");
+			
+			return "common/result";
 		}
 		
-		return "redirect:/board/list";
+		model.addAttribute("msg","접근 권한이 없는 페이지입니다.");
+		model.addAttribute("url", "/board/list");
+		
+		return "common/result";
 
 	}
 	
