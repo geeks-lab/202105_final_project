@@ -116,7 +116,7 @@
 	
 	<%@ include file="/WEB-INF/views/include/script.jsp" %>
 	
-	<!-- 음성합성 --><!-- 크롬 쓰바르브라ㅡㅏ발바ㅡㄹ -->
+	<!-- 음성합성 -->
 	<script type="text/javascript">
 	//변수설정
 	var synth = window.speechSynthesis;
