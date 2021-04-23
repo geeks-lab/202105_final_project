@@ -114,6 +114,30 @@
 						break;
 					}
 					document.getElementById('label-container').innerHTML = "<div>이 제품은 " + food + "입니다.</div>";
+				
+					/* let xhr = new XMLHttpRequest();
+					
+					xhr.open('POST','https://kakaoi-newtone-openapi.kakao.com/v1/synthesize');
+					xhr.setRequestHeader('Authorization','KakaoAK d381c5185416bd1f0e1808d306540f57');
+					xhr.setRequestHeader('Content-Type','application/xml');
+					xhr.send();
+					xhr.addEventListener('load',()=>{
+						let obj = JSON.parse(xhr.response); 
+					} */
+					
+					fetch("https://kakaoi-newtone-openapi.kakao.com/v1/synthesize", {
+						  method: "POST",
+						  headers: {
+						    "Content-Type": "application/xml",
+						    "Authorization": "KakaoAK d381c5185416bd1f0e1808d306540f57",
+						  },
+						  body: JSON.stringify({
+						    body: "<speak> 그는 그렇게 말했습니다. 
+						    	<voice name="MAN_DIALOG_BRIGHT">잘 지냈어? 나도 잘 지냈어.</voice> 
+						    	<voice name="WOMAN_DIALOG_BRIGHT" speechStyle="SS_ALT_FAST_1">금요일이 좋아요.</voice> </speak>'",
+						  }),
+						}).then((response) => console.log(response))
+					
 				}
 			}
 

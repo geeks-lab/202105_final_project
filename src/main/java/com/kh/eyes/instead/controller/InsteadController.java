@@ -9,4 +9,5 @@ public class InsteadController {
 	   public String instead() {
 	      return "instead/instead";
 }
+	
 }
