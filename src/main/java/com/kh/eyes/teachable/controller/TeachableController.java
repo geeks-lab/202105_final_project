@@ -23,3 +23,6 @@ public class TeachableController {
 		return "teachable/teachProduct_jiyoung";
 	}
 }
+
+
+
