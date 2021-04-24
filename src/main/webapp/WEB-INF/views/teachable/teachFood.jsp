@@ -7,6 +7,7 @@
 #myImage {
 	width: 100%;
 	height: 100%
+	
 }
 </style>
 </head>
@@ -59,13 +60,13 @@
 	<%@ include file="/WEB-INF/views/include/script.jsp"%>
 
 	<script type="text/javascript">
-		const URL = "https://teachablemachine.withgoogle.com/models/hiFJDaDW4/";
+		const teachURL = "https://teachablemachine.withgoogle.com/models/hiFJDaDW4/";
 
 		let model, webcam, labelContainer, maxPredictions;
 
 		async function init() {
-			const modelURL = URL + "model.json";
-			const metadataURL = URL + "metadata.json";
+			const modelURL = teachURL + "model.json";
+			const metadataURL = teachURL + "metadata.json";
 
 			model = await tmImage.load(modelURL, metadataURL);
 			maxPredictions = model.getTotalClasses();
@@ -113,12 +114,12 @@
 						food = "포카칩";
 						break;
 					}
-					document.getElementById('label-container').innerHTML = "<div>이 제품은 " + food + "입니다.</div>";
+					document.getElementById('label-container').innerHTML = '<div id="teachContent">이 제품은 ' + food + '입니다.</div>';
 				}
 			}
 
 			var myImage = document.getElementById('myImage');
-			myImage.src = document.getElementById('canvas').toDataURL(); //멈춘 canvas를 이미지url로 변환
+			myImage.src = document.getElementById('canvas').toDataURL(); //멈춘 canvas를 이미지teachURL로 변환
 
 			var file = dataURLtoFile(document.getElementById('canvas').toDataURL());
 			console.log(file);
@@ -127,10 +128,55 @@
 			console.log(teachData);
 			
 			formImage(teachData, file); //formImage함수에 변수로 넘겨줌
+			
+			let audioTag = document.createElement('audio');
+			
+			const KAKAO_API_KEY = "KakaoAK 90a704d11afe1462a34e54e1e115ba7a";
+			let teachURL = 'https://kakaoi-newtone-openapi.kakao.com/v1/synthesize';
+			
+			let header = new Headers();
+			header.append("Authorization",KAKAO_API_KEY);
+			header.append("Content-Type", "application/xml");
+			
+			var data = document.getElementById('teachContent').innerHTML;
+			
+			await fetch(teachURL,{"method" : "post", 
+											"headers" : header, 
+											"body" : '<speak>' + data +' </speak>'
+											})
+			.then(response => response.body)
+			.then(body => {
+			  const reader = body.getReader();
+
+			  return new ReadableStream({
+			    start(controller) {
+			      return pump();
+
+			      function pump() {
+			        return reader.read().then(({ done, value }) => {
+			          // When no more data needs to be consumed, close the stream
+			          if (done) {
+			            controller.close();
+			            return;
+			          }
+
+			          // Enqueue the next data chunk into our target stream
+			          controller.enqueue(value);
+			          return pump();
+			        });
+			      }
+			    }
+			  })
+			})
+			.then(stream => new Response(stream))
+			.then(response => response.blob())
+			.then(blob => URL.createObjectURL(blob))
+			.then(URL => audioTag.src = URL)
+			.then(audioTag.play())
 		}
 
-		function dataURLtoFile(dataurl, filename) { //url을 디코딩해서 file 객체로 만듦
-			var arr = dataurl.split(','), 
+		function dataURLtoFile(dataURL, filename) { //teachURL을 디코딩해서 file 객체로 만듦
+			var arr = dataURL.split(','), 
 				mime = arr[0].match(/:(.*?);/)[1], 
 				bstr = atob(arr[1]), 
 				n = bstr.length, 
@@ -155,7 +201,7 @@
 		        url : 'formImage',
 		        data : formdata,
 		        processData : false,	// data 파라미터 강제 string 변환 방지!!
-		        contentType : false,	// application/x-www-form-urlencoded; 방지!!
+		        contentType : false,	// application/x-www-form-teachURLencoded; 방지!!
 		        success : function (data) {
 		        	
 		        }
