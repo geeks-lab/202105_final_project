@@ -1,5 +1,9 @@
 package com.kh.eyes.voice.model.service;
 
-public interface VoiceService {
+import com.kh.eyes.voice.model.vo.Voice;
 
+public interface VoiceService {
+	
+	void insertVoiceSynth(Voice voice);
+	
 }

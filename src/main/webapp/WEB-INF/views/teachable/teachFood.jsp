@@ -48,7 +48,7 @@
 						<div id="label-container"></div>
 					</blockquote>
 				</div>
-				<a href="#" class="button primary fit" style="background-color: #f2849e">소리듣기</a>
+				<a class="button primary fit" onclick="voiceSynth()" style="background-color: #f2849e">소리듣기</a>
 			</div>
 		</div>
 
@@ -129,6 +129,10 @@
 			
 			formImage(teachData, file); //formImage함수에 변수로 넘겨줌
 			
+			voiceSynth();
+		}
+		
+		async function voiceSynth(){ //음성합성 실행 함수
 			let audioTag = document.createElement('audio');
 			
 			const KAKAO_API_KEY = "KakaoAK 90a704d11afe1462a34e54e1e115ba7a";
@@ -140,41 +144,41 @@
 			
 			var data = document.getElementById('teachContent').innerHTML;
 			
-			await fetch(teachURL,{"method" : "post", 
-											"headers" : header, 
-											"body" : '<speak>' + data +' </speak>'
-											})
+			await fetch(teachURL, {
+					"method" : "post", 
+					"headers" : header, 
+					"body" : '<speak>' + data +' </speak>'
+				})
 			.then(response => response.body)
 			.then(body => {
-			  const reader = body.getReader();
-
-			  return new ReadableStream({
-			    start(controller) {
-			      return pump();
-
-			      function pump() {
-			        return reader.read().then(({ done, value }) => {
-			          // When no more data needs to be consumed, close the stream
-			          if (done) {
-			            controller.close();
-			            return;
-			          }
-
-			          // Enqueue the next data chunk into our target stream
-			          controller.enqueue(value);
-			          return pump();
-			        });
-			      }
-			    }
-			  })
+				const reader = body.getReader();
+				
+			  	return new ReadableStream({
+			    	start(controller) {
+			      	return pump();
+				      	function pump() {
+				        	return reader.read().then(({ done, value }) => {
+					          	// When no more data needs to be consumed, close the stream
+					          	if (done) {
+					            	controller.close();
+					            	return;
+					          	}
+		
+						        // Enqueue the next data chunk into our target stream
+						        controller.enqueue(value);
+						        return pump();
+				        	});
+				      	}
+			   		}
+			  	})			  	
 			})
 			.then(stream => new Response(stream))
 			.then(response => response.blob())
 			.then(blob => URL.createObjectURL(blob))
 			.then(URL => audioTag.src = URL)
-			.then(audioTag.play())
+			.then(audioTag.play())	
 		}
-
+		
 		function dataURLtoFile(dataURL, filename) { //teachURL을 디코딩해서 file 객체로 만듦
 			var arr = dataURL.split(','), 
 				mime = arr[0].match(/:(.*?);/)[1], 
