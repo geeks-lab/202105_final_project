@@ -100,4 +100,11 @@ public class BoardController {
 		return ResponseEntity.ok().headers(headers).body(resource);
 	}
 	
+	@GetMapping("delete")
+	public String deleteBoard(String sugIdx) {
+		boardService.deleteBoard(sugIdx);
+		
+		return "redirect:/board/list";
+	}
+	
 }

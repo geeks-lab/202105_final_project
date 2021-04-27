@@ -22,10 +22,10 @@
 		from(
 			select rownum rnum, b.*
 			from(
-				select sug_idx, sug_title, sug_reg_date, user_id 
+				select sug_idx, sug_title, sug_reg_date, user_id, sug_is_del 
 				from user_suggest
 				order by ${sort} ${direction}
 			) b
-		) where rnum between #{queryStart} and #{queryEnd}
+		) where rnum between #{queryStart} and #{queryEnd} and sug_is_del = 0
 	</select>
 </mapper>

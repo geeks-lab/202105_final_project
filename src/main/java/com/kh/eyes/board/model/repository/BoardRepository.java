@@ -5,6 +5,7 @@ import java.util.List;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.Update;
 
 import com.kh.eyes.board.model.vo.Board;
 import com.kh.eyes.common.util.file.FileVo;
@@ -29,4 +30,11 @@ public interface BoardRepository {
 	
 	@Select("select * from user_file where f_type_idx = #{sug_idx}")
 	List<FileVo> selectFileWithSugIdx(String sugIdx);
+	
+	@Update("update user_suggest set sug_is_del = 1 where sug_idx = #{sugIdx}")
+	int deleteBoard(String sugIdx);
+	
+	@Update("update user_file set f_is_del = 1 where f_type_idx = #{fTypeIdx}")
+	int deleteFile(String fTypeIdx);
+	
 }
