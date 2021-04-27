@@ -50,10 +50,24 @@ public class TeachableController {
 	    return "teachable/teachFood";
 	}
 
-	@GetMapping("jiyoungtest")
-	public String jiyoungtest() {
-		return "teachable/teachProduct_jiyoung";
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	@GetMapping("ocrtest")
+	public String product_ocrtest() {
+		return "teachable/ocrtest";
 	}
+	
+	
+	
+	
 	
 	
 }

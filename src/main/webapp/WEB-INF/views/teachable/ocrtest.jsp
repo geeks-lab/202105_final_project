@@ -7,6 +7,7 @@
 #myImage {
 	width: 100%;
 	height: 100%
+	
 }
 </style>
 </head>
@@ -47,7 +48,7 @@
 						<div id="label-container"></div>
 					</blockquote>
 				</div>
-				<a href="#" class="button primary fit" style="background-color: #f2849e">소리듣기</a>
+				<a class="button primary fit" onclick="voiceSynth()" style="background-color: #f2849e">소리듣기</a>
 			</div>
 		</div>
 
@@ -59,18 +60,18 @@
 	<%@ include file="/WEB-INF/views/include/script.jsp"%>
 
 	<script type="text/javascript">
-		const URL = "https://teachablemachine.withgoogle.com/models/hiFJDaDW4/";
+		const teachURL = "https://teachablemachine.withgoogle.com/models/hiFJDaDW4/";
 
 		let model, webcam, labelContainer, maxPredictions;
 
 		async function init() {
-			const modelURL = URL + "model.json";
-			const metadataURL = URL + "metadata.json";
+			const modelURL = teachURL + "model.json";
+			const metadataURL = teachURL + "metadata.json";
 
 			model = await tmImage.load(modelURL, metadataURL);
 			maxPredictions = model.getTotalClasses();
 
-			const flip = true;
+			const flip = false;
 			webcam = new tmImage.Webcam(300, 300, flip); // width, height, flip
 			await webcam.setup(); // request access to the webcam
 			await webcam.play();
@@ -113,48 +114,74 @@
 						food = "포카칩";
 						break;
 					}
-					document.getElementById('label-container').innerHTML = "<div>이 제품은 " + food + "입니다.</div>";
-				
-					/* let xhr = new XMLHttpRequest();
-					
-					xhr.open('POST','https://kakaoi-newtone-openapi.kakao.com/v1/synthesize');
-					xhr.setRequestHeader('Authorization','KakaoAK d381c5185416bd1f0e1808d306540f57');
-					xhr.setRequestHeader('Content-Type','application/xml');
-					xhr.send();
-					xhr.addEventListener('load',()=>{
-						let obj = JSON.parse(xhr.response); 
-					} */
-					
-					fetch("https://kakaoi-newtone-openapi.kakao.com/v1/synthesize", {
-						  method: "POST",
-						  headers: {
-						    "Content-Type": "application/xml",
-						    "Authorization": "KakaoAK d381c5185416bd1f0e1808d306540f57",
-						  },
-						  body: JSON.stringify({
-						    body: "<speak> 그는 그렇게 말했습니다. 
-						    	<voice name="MAN_DIALOG_BRIGHT">잘 지냈어? 나도 잘 지냈어.</voice> 
-						    	<voice name="WOMAN_DIALOG_BRIGHT" speechStyle="SS_ALT_FAST_1">금요일이 좋아요.</voice> </speak>'",
-						  }),
-						}).then((response) => console.log(response))
-					
+					document.getElementById('label-container').innerHTML = '<div id="teachContent">이 제품은 ' + food + '입니다.</div>';
 				}
 			}
 
 			var myImage = document.getElementById('myImage');
-			myImage.src = document.getElementById('canvas').toDataURL(); //멈춘 canvas를 이미지url로 변환
+			myImage.src = document.getElementById('canvas').toDataURL(); //멈춘 canvas를 이미지teachURL로 변환
 
 			var file = dataURLtoFile(document.getElementById('canvas').toDataURL());
-			console.log(file);
+			console.dir(document.getElementById('canvas').toDataURL());
 			
 			var teachData = new Array(category, food); //티처블 테이블에 저장될 속성을 배열로 전송
 			console.log(teachData);
 			
 			formImage(teachData, file); //formImage함수에 변수로 넘겨줌
+			
+			voiceSynth();
+			ocrTest();
 		}
-
-		function dataURLtoFile(dataurl, filename) { //url을 디코딩해서 file 객체로 만듦
-			var arr = dataurl.split(','), 
+		
+		async function voiceSynth(){ //음성합성 실행 함수
+			let audioTag = document.createElement('audio');
+			
+			const KAKAO_API_KEY = "KakaoAK d381c5185416bd1f0e1808d306540f57";
+			let teachURL = 'https://kakaoi-newtone-openapi.kakao.com/v1/synthesize';
+			
+			let header = new Headers();
+			header.append("Authorization",KAKAO_API_KEY);
+			header.append("Content-Type", "application/xml");
+			
+			var data = document.getElementById('teachContent').innerHTML;
+			
+			await fetch(teachURL, {
+					"method" : "post", 
+					"headers" : header, 
+					"body" : '<speak>' + data +' </speak>'
+				})
+			.then(response => response.body)
+			.then(body => {
+				const reader = body.getReader();
+				
+			  	return new ReadableStream({
+			    	start(controller) {
+			      	return pump();
+				      	function pump() {
+				        	return reader.read().then(({ done, value }) => {
+					          	// When no more data needs to be consumed, close the stream
+					          	if (done) {
+					            	controller.close();
+					            	return;
+					          	}
+		
+						        // Enqueue the next data chunk into our target stream
+						        controller.enqueue(value);
+						        return pump();
+				        	});
+				      	}
+			   		}
+			  	})			  	
+			})
+			.then(stream => new Response(stream))
+			.then(response => response.blob())
+			.then(blob => URL.createObjectURL(blob))
+			.then(URL => audioTag.src = URL)
+			.then(audioTag.play())	
+		}
+		
+		function dataURLtoFile(dataURL, filename) { //teachURL을 디코딩해서 file 객체로 만듦
+			var arr = dataURL.split(','), 
 				mime = arr[0].match(/:(.*?);/)[1], 
 				bstr = atob(arr[1]), 
 				n = bstr.length, 
@@ -179,14 +206,54 @@
 		        url : 'formImage',
 		        data : formdata,
 		        processData : false,	// data 파라미터 강제 string 변환 방지!!
-		        contentType : false,	// application/x-www-form-urlencoded; 방지!!
+		        contentType : false,	// application/x-www-form-teachURLencoded; 방지!!
 		        success : function (data) {
 		        	
 		        }
 		    	//...
 		    });
 		}
-
+	
+		async function ocrTest(){ //텍스트인식함수
+			let ocrTag = document.createElement('ocr');
+			
+			const SECRET_KEY = "d1hZQnlSSHpDWWdzeXZyY05lcXNJQmZvRXhZanpoUm4=";
+			let invokeURL = 'http://clovaocr-api-kr.ncloud.com/external/v1/8406/d7a27f39bf917715e8f4a9500d5eba0d0ffda642bad8fe48e8c8a0380ccfa010';
+			
+			let header = new Headers();
+			header.append("Content-Type", "application/jsonl");
+			header.append("X-OCR-SECRET",SECRET_KEY);
+			
+			//var data = document.getElementById('teachContent').innerHTML;
+			
+			await fetch(invokeURL, {
+					"method" : "post", 
+					"headers" : header, 
+					"body" : {
+					    "images": [
+					        {
+					          "format": "jpg",
+					          "name": "medium",
+					          "data": null,
+					          "url": "https://blog.kakaocdn.net/dn/bRYeXZ/btqDUFdxw1n/gGHOio014ZkvGB4JB9IJq0/img.jpg"
+					        }
+					      ],
+					      "lang": "ko",
+					      "requestId": "string",
+					      "resultType": "string",
+					      "version": "V1"
+					  }
+				})
+			.then(response => response.json())
+			.then(obj => {
+				console.dir(obj);
+				/* obj.documents.forEach((e)=>{
+					
+				}	 */	  	
+			})
+			
+		}
+		
 		async function loop() {
 			webcam.update(); // update the webcam frame
 			await predict();
