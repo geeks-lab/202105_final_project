@@ -78,4 +78,11 @@ public class BoardServiceImpl implements BoardService{
 		return commandMap;
 	}
 	
+	@Override
+	public void deleteBoard(String sugIdx) {
+		String fTypeIdx = sugIdx;
+		boardRepository.deleteBoard(sugIdx);
+		boardRepository.deleteFile(fTypeIdx);
+	}
+	
 }

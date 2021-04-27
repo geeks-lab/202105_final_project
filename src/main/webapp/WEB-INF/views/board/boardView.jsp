@@ -68,7 +68,7 @@
 							<span>
 									<button class="button primary fit" style="background-color: #9370DB" onclick="submitData('list')"><span>목록</span></button>
 									<br><br>
-									<button class="button primary fit"><span>삭제</span></button>
+									<button class="button primary fit" onclick="deleteBoard('${board.sugIdx}')"><span>삭제</span></button>
 							</span>
 						</div>
 						<script type="text/javascript">
@@ -83,7 +83,10 @@
 							  
 						      location.href = '${context}' + "/board/download?" + urlEncodedForm(params);
 						   }
-						
+							
+						   function deleteBoard(sugIdx){
+							   location.href = '${context}' + "/board/delete?sugIdx=" + sugIdx;
+						   }
 						</script>
 					</div>
 					
