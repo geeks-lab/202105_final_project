@@ -1,7 +1,16 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-   pageEncoding="UTF-8"%>
-<%@ include file="/WEB-INF/views/include/head.jsp" %>
-
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ include file="/WEB-INF/views/include/head.jsp"%>
+<head>
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+<style type="text/css">
+#myImage {
+	width: 100%;
+	height: 100%
+	
+}
+</style>
+</head>
 <body class="is-preload">
 	<!-- Wrapper -->
 	<div id="wrapper">
@@ -15,39 +24,44 @@
 					<h1>생필품 찾기</h1>
 					<p>사진 찍으신 제품이 무엇인지 알려드립니다.</p>
 				</header>
+
 				<section class="tiles mytiles">
 					<article class="style2">
-						<span class="image"> <img src="/resources/images/pic02.jpg" alt="" />
-						</span> <a href="generic.html">
-							<div class="content">
-								<img style="width: 20%; opacity: 70%;" src="/resources/images/camera.png" alt="" />
-								<h2>&nbsp;다시 찍기</h2>
-							</div>
-						</a>
+						<div id="webcam-container"></div>
+					</article>
+					<article class="style2">
+						<span class="image"> <img id="myImage" src="/resources/images/pic02.jpg" alt="" />
+						</span> 
+							<a onclick="pause('생필품')">
+								<div class="content">
+									<img style="width: 20%; opacity: 70%;" src="/resources/images/camera.png" alt="" />
+									<h2>&nbsp;사진 찍기</h2>
+								</div>
+							</a>
 					</article>
 				</section>
 				<p style="text-align: center; margin-top: 2em">* 재촬영을 원하시면 이미지를 눌러주세요.</p>
 				<hr>
 				<h2>제품명</h2>
 				<div>
-					<blockquote>Fringilla nisl. Donec accumsan interdum
-						nisi, quis tincidunt felis sagittis eget tempus euismod.
-						Vestibulum ante ipsum primis in faucibus vestibulum. Blandit
-						adipiscing eu felis iaculis volutpat ac adipiscing accumsan
-						faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum
-						dolor sit amet nullam adipiscing eu felis.
+					<blockquote>
+						<div id="label-container"></div>
 					</blockquote>
 				</div>
-				<a href="#" class="button primary fit" style="background-color: skyblue">소리듣기</a>
+				<a class="button primary fit" onclick="voiceSynth()" style="background-color: #f2849e">소리듣기</a>
 			</div>
 		</div>
 
 		<!-- Footer -->
 		<%@ include file="/WEB-INF/views/include/footer.jsp"%>
-		
+
 	</div>
 
 	<%@ include file="/WEB-INF/views/include/script.jsp"%>
-
+	
+	<script type="text/javascript" src='../../../resources/js/teachable.js'></script>
+	<script type="text/javascript">
+		init('생필품');
+	</script>
 </body>
 </html>
