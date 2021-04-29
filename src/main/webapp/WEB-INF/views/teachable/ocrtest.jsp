@@ -123,7 +123,7 @@
 
 			var file = dataURLtoFile(document.getElementById('canvas').toDataURL());
 			console.dir(document.getElementById('canvas').toDataURL());
-			
+			console.dir(file);
 			var teachData = new Array(category, food); //티처블 테이블에 저장될 속성을 배열로 전송
 			console.log(teachData);
 			
@@ -216,41 +216,39 @@
 	
 		async function ocrTest(){ //텍스트인식함수
 			let ocrTag = document.createElement('ocr');
+			ocrTag.className = 'ocrTag';
 			
-			const SECRET_KEY = "d1hZQnlSSHpDWWdzeXZyY05lcXNJQmZvRXhZanpoUm4=";
-			let invokeURL = 'http://clovaocr-api-kr.ncloud.com/external/v1/8406/d7a27f39bf917715e8f4a9500d5eba0d0ffda642bad8fe48e8c8a0380ccfa010';
+			let invokeURL = 'https://0065417594944195ac1452a41b197f7b.apigw.ntruss.com/custom/v1/8430/12a8a28869fc3dfac419936519c63abadcf50e925d078c50ea3a3369d356198a/general';
 			
-			let header = new Headers();
-			header.append("Content-Type", "application/jsonl");
-			header.append("X-OCR-SECRET",SECRET_KEY);
+			let now = new Date();
+			let uri = 'https://blog.kakaocdn.net/dn/bRYeXZ/btqDUFdxw1n/gGHOio014ZkvGB4JB9IJq0/img.jpg';
+			let encoded = encodeURI(uri);			
+			let bodyObj = {
+				    "images": [
+				        {
+				          "format": "jpg",
+				          "name": "medium",
+				          "data": null,
+				          "url": encoded
+				        }
+				      ],
+				      "lang": "ko",
+				      "requestId": "string",
+				      "resultType": "string",
+				      "timestamp": now.getTime(),
+				      "version": "V1"
+				      
+				  };
 			
-			//var data = document.getElementById('teachContent').innerHTML;
-			
-			await fetch(invokeURL, {
-					"method" : "post", 
-					"headers" : header, 
-					"body" : {
-					    "images": [
-					        {
-					          "format": "jpg",
-					          "name": "medium",
-					          "data": null,
-					          "url": "https://blog.kakaocdn.net/dn/bRYeXZ/btqDUFdxw1n/gGHOio014ZkvGB4JB9IJq0/img.jpg"
-					        }
-					      ],
-					      "lang": "ko",
-					      "requestId": "string",
-					      "resultType": "string",
-					      "version": "V1"
-					  }
-				})
-			.then(response => response.json())
-			.then(obj => {
-				console.dir(obj);
-				/* obj.documents.forEach((e)=>{
-					
-				}	 */	  	
+			let response = await fetch("/teach/ocr", {
+				"method": "POST",
+				"headers":{'Content-Type': 'application/json'},
+			    "body":  JSON.stringify(bodyObj)			   
+			}).then(response => response.json())
+			.then(data => {
+				console.dir(data);
 			})
+			
 			
 		}
 		

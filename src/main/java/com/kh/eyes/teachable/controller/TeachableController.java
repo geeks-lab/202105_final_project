@@ -1,11 +1,18 @@
 package com.kh.eyes.teachable.controller;
 
+import java.util.Map;
 import java.util.UUID;
 
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.SessionAttribute;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -50,19 +57,19 @@ public class TeachableController {
 	    return "teachable/teachFood";
 	}
 
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	@GetMapping("ocrtest")
 	public String product_ocrtest() {
 		return "teachable/ocrtest";
+	}
+	
+	@PostMapping("ocr")
+	@ResponseBody
+	public ResponseEntity<String> getTextFromOCR(@RequestBody Map<String,Object> bodyObj) {				
+		String response = teachableService.getTextFromOcr(bodyObj);
+		HttpHeaders responseHeaders = new HttpHeaders(); 
+		responseHeaders.add("Content-Type", "text/plain; charset=utf-8");
+
+		return new ResponseEntity<String>(response, responseHeaders,HttpStatus.OK);
 	}
 	
 	
