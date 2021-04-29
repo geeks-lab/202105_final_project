@@ -6,6 +6,11 @@
 <meta charset="UTF-8">
 </head>
 <body>
+<!-- 음성인식 버튼 -->
+<div class="words" style="position: fixed; bottom: 10px; right: 10px;">
+    <img src="/resources/images/micro.png" onclick="voiceRecog()">
+</div>
+
 <!-- Footer -->
 	<footer id="footer">
 		<div class="inner">
@@ -23,5 +28,7 @@
 			</ul>
 		</div>
 	</footer>
+	
+	<script type="text/javascript" src='../../../resources/js/voiceRecog.js'></script>
 </body>
 </html>
