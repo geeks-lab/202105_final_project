@@ -107,7 +107,7 @@ async function voiceSynth(){ //음성합성 실행 함수
 	await fetch(teachURL, { //request
 			"method" : "post", 
 			"headers" : header, 
-			"body" : '<speak>' + data +' </speak>'
+			"body" : '<speak><prosody rate="slow">' + data +' </prosody></speak>'
 	})
 	.then(response => response.body) //response
 	.then(body => {				
