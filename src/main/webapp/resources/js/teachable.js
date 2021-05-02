@@ -72,7 +72,7 @@ async function pause(category) { //이미지 클릭 시 사진 찍히는 함수
 					product = "좋은느낌 생리대";
 					break;
 				case "product_toothpaste":
-					product = "센소다임 칫솔";
+					product = "센소다인 치약";
 					break;
 				}
 				document.getElementById('label-container').innerHTML = '<div id="teachContent">이 제품은 ' + product + '입니다.</div>';
