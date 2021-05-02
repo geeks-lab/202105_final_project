@@ -48,7 +48,7 @@
 						<div id="label-container"></div>
 					</blockquote>
 				</div>
-				<a class="button primary fit" onclick="voiceSynth()" style="background-color: #f2849e">소리듣기</a>
+				<a class="button primary fit" onclick="voiceSynth()" style="background-color: #81d2f5">소리듣기</a>
 			</div>
 		</div>
 
