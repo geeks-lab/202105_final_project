@@ -32,7 +32,7 @@
 					<article class="style2">
 						<span class="image"> <img id="myImage" src="/resources/images/pic02.jpg" alt="" />
 						</span> 
-							<a onclick="pause('생필품')">
+							<a onclick="pause('생필품') && ocrText()">
 								<div class="content">
 									<img style="width: 20%; opacity: 70%;" src="/resources/images/camera.png" alt="" />
 									<h2>&nbsp;사진 찍기</h2>
@@ -63,5 +63,8 @@
 	<script type="text/javascript">
 		init('생필품');
 	</script>
+	
+	<script type="text/javascript" src='../../../resources/js/ocr.js'></script>
+	
 </body>
 </html>
