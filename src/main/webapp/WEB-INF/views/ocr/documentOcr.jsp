@@ -21,19 +21,19 @@
 		<div id="main">
 			<div class="inner">
 				<header>
-					<h1>식음료 찾기</h1>
-					<p>사진 찍으신 제품이 무엇인지 알려드립니다.</p>
+					<h1>문서인식</h1>
+					<p>문서, 텍스트 등을 인식시켜주세요. 문서 내용을 읽어드립니다.</p>
 				</header>
 
 				<section class="tiles mytiles">
 					<article class="style1">
 						<div id="webcam-container"></div>
 					</article>
-					<article class="style1">
-						<span class="image"> <img id="myImage" src="/resources/images/pic01.jpg" alt="" />
+					<article class="style6">
+						<span class="image"> <img id="myImage" src="/resources/images/pic06.jpg" alt="" />
 						</span> 
-							<a onclick="pause('식음료') && ocrText()">
-								<div class="content">
+							<a onclick="pause('문서') && ocrText()">
+								<div class="content_teachable">
 									<img style="width: 20%; opacity: 70%;" src="/resources/images/camera.png" alt="" />
 									<h2>&nbsp;사진 찍기</h2>
 								</div>
@@ -42,13 +42,13 @@
 				</section>
 				<p style="text-align: center; margin-top: 2em">* 재촬영을 원하시면 이미지를 눌러주세요.</p>
 				<hr>
-				<h2>제품명</h2>
+				<h2>문서내용</h2>
 				<div>
 					<blockquote>
 						<div id="label-container"></div>
 					</blockquote>
 				</div>
-				<a class="button primary fit" onclick="voiceSynth()" style="background-color: #f2849e">소리듣기</a>
+				<a class="button primary fit" onclick="voiceSynth()" style="background-color: #80adf6">소리듣기</a>
 			</div>
 		</div>
 
@@ -62,7 +62,7 @@
 	<script type="text/javascript" src='../../../resources/js/teachable.js'></script>
 	
 	<script type="text/javascript">
-		init('식음료');
+		init('문서');
 	</script>
 	
 	<script type="text/javascript" src='../../../resources/js/ocr.js'></script>
