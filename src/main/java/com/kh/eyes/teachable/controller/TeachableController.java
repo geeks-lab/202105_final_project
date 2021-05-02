@@ -56,11 +56,6 @@ public class TeachableController {
 		teachableService.insertTeachable(teachable, file);
 	    return "teachable/teachFood";
 	}
-
-	@GetMapping("ocrtest")
-	public String product_ocrtest() {
-		return "teachable/ocrtest";
-	}
 	
 	@PostMapping("ocr")
 	@ResponseBody

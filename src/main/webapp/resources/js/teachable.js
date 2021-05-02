@@ -14,7 +14,7 @@ async function init(category) { //티처블 실행 함수 view단에서 category
 	model = await tmImage.load(modelURL, metadataURL);
 	maxPredictions = model.getTotalClasses();
 
-	const flip = true;
+	const flip = false; //ocr에서도 실행하기 위해 좌우대칭 false로 변경
 	webcam = new tmImage.Webcam(300, 300, flip); // width, height, flip
 	await webcam.setup(); // request access to the webcam
 	await webcam.play();
@@ -102,17 +102,17 @@ async function voiceSynth(){ //음성합성 실행 함수
 	header.append("Authorization",KAKAO_API_KEY);
 	header.append("Content-Type", "application/xml");
 			
-	var data = document.getElementById('teachContent').innerHTML;
+	var data = document.getElementById('teachContent').innerText; //innerHTML대신 innerText변경
 			
 	await fetch(teachURL, { //request
 			"method" : "post", 
 			"headers" : header, 
-			"body" : '<speak>' + data +' </speak>'
+			"body" : '<speak><prosody rate="slow">' + data +' </prosody></speak>'
 	})
 	.then(response => response.body) //response
 	.then(body => {				
 		const reader = body.getReader();
-		console.log(reader);
+		//console.log(reader);
 				
 		return new ReadableStream({
 			start(controller) {

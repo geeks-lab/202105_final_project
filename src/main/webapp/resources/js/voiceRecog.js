@@ -34,11 +34,13 @@ async function voiceRecog() {
 				location.href="/teach/food";
 			} else if(transcript =='2번' || transcript =='생필품' || transcript =='생필품 찾기'){
 				location.href="/teach/product";
-			} else if(transcript =='3번' || transcript =='목소리' || transcript =='목소리 되어주기'){
+			} else if(transcript =='3번' || transcript =='문서' || transcript =='문서 읽어주기'){
+				location.href="/ocr/document";
+			} else if(transcript =='4번' || transcript =='목소리' || transcript =='목소리 되어주기'){
 				location.href="/instead";
-			} else if(transcript =='4번' || transcript =='이용안내'){
+			} else if(transcript =='5번' || transcript =='이용안내'){
 				location.href="/info";
-			} else if(transcript =='5번' || transcript =='소리함' || transcript =='고객의 소리함'){
+			} else if(transcript =='6번' || transcript =='소리함' || transcript =='고객의 소리함'){
 				location.href="/board/list";
 			}
 		     

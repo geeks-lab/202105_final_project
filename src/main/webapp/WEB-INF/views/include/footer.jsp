@@ -8,7 +8,8 @@
 <body>
 <!-- 음성인식 버튼 -->
 <div class="words" style="position: fixed; bottom: 10px; right: 10px;">
-    <img src="/resources/images/micro.png" onclick="voiceRecog()">
+    <img src="/resources/images/micro.png" style="margin:0 0 0 2em" onclick="voiceRecog()">
+    <p style="font-weight:900">음성메뉴이동</p>
 </div>
 
 <!-- Footer -->
