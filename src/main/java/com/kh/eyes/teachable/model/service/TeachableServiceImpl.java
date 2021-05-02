@@ -73,13 +73,12 @@ public class TeachableServiceImpl implements TeachableService{
 		HttpHeaders headerMap = new HttpHeaders();
 		headerMap.add("Content-Type", "application/json");
 		headerMap.add("X-OCR-SECRET",SECRET_KEY);
-		HttpHeaders headers = new HttpHeaders(headerMap);		
 		RequestEntity< Map<String,Object>> entity = RequestEntity
 																.method(HttpMethod.POST, invokeURL)
 																.headers(headerMap)
 																.body(bodyObj);
 		
-		ResponseEntity<String> response =   restTemplate.exchange(entity, String.class);
+		ResponseEntity<String> response = restTemplate.exchange(entity, String.class);
 		return response.getBody();
 	}
 }
