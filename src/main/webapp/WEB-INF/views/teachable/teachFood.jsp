@@ -29,11 +29,11 @@
 					<article class="style1">
 						<div id="webcam-container"></div>
 					</article>
-					<article class="style1">
+					<article class="style7">
 						<span class="image"> <img id="myImage" src="/resources/images/pic01.jpg" alt="" />
 						</span> 
 							<a onclick="pause('식음료') && ocrText()">
-								<div class="content">
+								<div class="content_teachable">
 									<img style="width: 20%; opacity: 70%;" src="/resources/images/camera.png" alt="" />
 									<h2>&nbsp;사진 찍기</h2>
 								</div>
