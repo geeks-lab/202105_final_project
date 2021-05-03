@@ -14,9 +14,9 @@
 			<div class="content_wrapper">
 			<h1>서비스 이용방법</h1>
 				<div class="individual individual_wrapper_01">
-				<h2>
+				<p>
 					이미지 인식을 통한 제품 알아보기
-				</h2>
+				</p>
 				<ul class="head">
 	              <li class="li_01"><span class="num">01</span>제품 찾기 선택<span class="arr"></span></li>
 	              <li class="li_02"><span class="num">02</span>카메라 촬영<span class="arr"></span></li>
@@ -26,9 +26,9 @@
 	            </ul>
 				</div>
 				<div class="individual individual_wrapper_02">
-				<h2>
+				<p>
 					목소리 되어주기 기능 이용하기
-				</h2>
+				</p>
 				<ul class="head">
 	              <li class="li_01"><span class="num">01</span>목소리 되어주기 선택<span class="arr"></span></li>
 	              <li class="li_02"><span class="num">02</span>내용 기입<span class="arr"></span></li>
