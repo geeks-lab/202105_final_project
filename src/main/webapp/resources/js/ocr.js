@@ -1,9 +1,4 @@
 async function ocrText(){ //텍스트인식함수
-	let ocrTag = document.createElement('ocr');
-	ocrTag.className = 'ocrTag';
-         
-	let invokeURL = 'https://0065417594944195ac1452a41b197f7b.apigw.ntruss.com/custom/v1/8430/12a8a28869fc3dfac419936519c63abadcf50e925d078c50ea3a3369d356198a/general';
-         
 	let now = new Date();
 	let urlArr = document.getElementById('canvas').toDataURL().split(',');
 	let url = urlArr[1];
