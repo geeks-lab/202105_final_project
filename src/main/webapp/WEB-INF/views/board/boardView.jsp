@@ -18,6 +18,7 @@
 		pre{
           overflow: auto;
           white-space: pre-wrap;
+          font-family: 'Font Awesome 5 Free';
       	}
 	</style>
 </head>
