@@ -40,10 +40,10 @@
 									<tbody>
 										<tr>
 											<td class="list">
-												<span>▶ 번호<br>${board.sugIdx}</span>
-												<span>▶ 제목<br>${board.sugTitle}</span>
-												<span>▶ 등록일<br>${board.sugRegDate}</span>
-												<span>▶ 작성자<br>${board.userId}</span>
+												<span>번호<br>${board.sugIdx}</span>
+												<span>제목<br>${board.sugTitle}</span>
+												<span>등록일<br>${board.sugRegDate}</span>
+												<span>작성자<br>${board.userId}</span>
 											</td>
 										</tr>
 										<tr style="height: 40vh">

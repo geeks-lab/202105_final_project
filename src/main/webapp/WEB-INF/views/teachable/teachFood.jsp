@@ -44,7 +44,7 @@
 				<hr>
 				<h2>제품명</h2>
 				<div>
-					<blockquote>
+					<blockquote style="min-height: 20vh">
 						<div id="label-container"></div>
 					</blockquote>
 				</div>

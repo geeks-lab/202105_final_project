@@ -13,7 +13,7 @@
 				<div id="main">
 					<div class="inner">
 						<header>
-							<h3>불편한 당신의 눈을 대신해드립니다</h3>
+							<h3>당신의 눈과 목소리를 대신해드립니다</h3>
 						</header>
 						<section class="tiles mytiles">
 							<article class="style1 majortiles">
