@@ -2,7 +2,6 @@ package com.kh.eyes.user.validator;
 
 import java.util.regex.Pattern;
 
-
 import org.springframework.stereotype.Component;
 import org.springframework.validation.Errors;
 import org.springframework.validation.Validator;
@@ -13,26 +12,23 @@ import com.kh.eyes.user.model.vo.User;
 @Component
 public class MemberValidator implements Validator{
 	
-	private final UserRepository memberRepository;
+	private final UserRepository userRepository;
 	
-	public MemberValidator(UserRepository memberRepository) {
-		this.memberRepository = memberRepository;
+	public MemberValidator(UserRepository userRepository) {
+		this.userRepository = userRepository;
 	}
 	
-	//validator가 실행될 조건을 지정
 	@Override
 	public boolean supports(Class<?> clazz) {
 		return User.class.equals(clazz);
 	}
 	
-	//target : 검증할 컨트롤러메서드의 파라미터
-	//Errors : validator를 통과하지 못했을 때 컨트롤러에 보낼 에러코드와, 메세지 지정
 	@Override
 	public void validate(Object target, Errors errors) {
 		User member = (User) target;
 
 		//1. 아이디 존재 유무
-		if(memberRepository.selectMemberById(member.getUserId()) != null){
+		if(userRepository.selectUserById(member.getUserId()) != null){
 			errors.rejectValue("userId", "error.userId", "이미 존재하는 아이디입니다.");
 		}
 		
@@ -44,7 +40,5 @@ public class MemberValidator implements Validator{
 		}
 		
 	}
-	
-	
 
 }

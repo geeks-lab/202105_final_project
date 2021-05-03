@@ -29,7 +29,7 @@
 	
 					<div class="formPw formWrap" id="formPw">
 						<label class="label">비밀번호 </label> <input class="input"
-							type="password" name="password" id="pw" placeholder="비밀번호를 입력하세요."
+							type="password" name="userPwd" id="pw" placeholder="비밀번호를 입력하세요."
 							required />
 					</div>
 	
@@ -80,7 +80,7 @@
 						alert("로그인에 성공하였습니다.");
 					}
 				}).catch((error)=>{
-					error.alertMessage();
+					alert(error);
 				})
 			}
 	

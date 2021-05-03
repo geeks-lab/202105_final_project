@@ -11,7 +11,7 @@ import com.kh.eyes.user.model.vo.User;
 @Service
 public class UserServiceImpl implements UserService{
 	
-	private final UserRepository memberRepository;
+	private final UserRepository userRepository;
 	
 	@Autowired
 	private RestTemplate http;
@@ -19,31 +19,29 @@ public class UserServiceImpl implements UserService{
 	@Autowired
 	private PasswordEncoder passwordEncoder;
 	
-	public UserServiceImpl(UserRepository memberRepository) {
-		this.memberRepository = memberRepository;
+	public UserServiceImpl(UserRepository userRepository) {
+		this.userRepository = userRepository;
 	}
 	
 	@Override
-	public User selectMemberById(String userId) {
-		return memberRepository.selectMemberById(userId);
-	}
-	
-
-	@Override
-	public int insertMember(User member) {
-		
-		member.setPw(passwordEncoder.encode(member.getUserPwd()));
-		return memberRepository.insertMember(member);
+	public User selectUserById(String userId) {
+		return userRepository.selectUserById(userId);
 	}
 
 	@Override
-	public User authenticateUser(User member) {
+	public int insertUser(User user) {
+		user.setUserPwd(passwordEncoder.encode(user.getUserPwd()));
+		return userRepository.insertUser(user);
+	}
 
-		User userInfo = memberRepository.selectMemberForAuth(member.getUserId());
-		System.out.println(userInfo);
-		System.out.println(member);
+	@Override
+	public User authenticateUser(User user) {
+
+		User userInfo = userRepository.selectUserForAuth(user.getUserId());
+		//System.out.println(userInfo);
+		//System.out.println(user);
 		if(userInfo == null || 
-				!passwordEncoder.matches(member.getUserPwd(), userInfo.getUserPwd())) {
+				!passwordEncoder.matches(user.getUserPwd(), userInfo.getUserPwd())) {
 			System.out.println("????");
 			return null;
 		}

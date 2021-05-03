@@ -1,4 +1,4 @@
-package com.kh.eyes.board;
+package com.kh.eyes.user;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -7,27 +7,25 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
 
-import com.kh.eyes.board.model.repository.BoardRepository;
-import com.kh.eyes.board.model.vo.Board;
+import com.kh.eyes.user.model.repository.UserRepository;
+import com.kh.eyes.user.model.vo.User;
 
 @WebAppConfiguration
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = {"file:src/main/webapp/WEB-INF/spring/**/*-context.xml"})
-public class BoardRepositoryTest {
+public class UserRepositoryTest {
 	
 	@Autowired
-	BoardRepository repo;
+	UserRepository repo;
 	
 	@Test
-	public void insertBoardTest() {
-		Board board = new Board();
-		board.setSugTitle("더미데이터");
-		board.setSugContent("더미데이터입력");
-		board.setUserId("tester");
+	public void insertUserTest() {
+		User user = new User();
+		user.setUserId("testUser2");
+		user.setUserName("테스트");
+		user.setUserPwd("1234");
 		
-		for (int i = 0; i < 2; i++) {
-			repo.insertBoard(board);
-		}
+		repo.insertUser(user);
 	}
 	
 }
