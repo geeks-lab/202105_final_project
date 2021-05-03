@@ -42,6 +42,10 @@ async function voiceRecog() {
 				location.href="/info";
 			} else if(transcript =='6번' || transcript =='소리함' || transcript =='고객의 소리함'){
 				location.href="/board/list";
+			} else if(transcript == '로그인'){
+				location.href="/user/login";
+			} else if(transcript == '회원가입'){
+				location.href="/user/join";
 			}
 		     
 	});
