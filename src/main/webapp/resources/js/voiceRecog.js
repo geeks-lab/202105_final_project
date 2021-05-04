@@ -30,7 +30,7 @@ async function voiceRecog() {
 				}
 			}
 		     
-			if(transcript =='1번' || transcript =='식음료' || transcript =='식음료 찾기'){
+			if(transcript =='1번' || transcript =='식음료' || transcript =='시금료' ||transcript =='식음료 찾기'){
 				location.href="/teach/food";
 			} else if(transcript =='2번' || transcript =='생필품' || transcript =='생필품 찾기'){
 				location.href="/teach/product";
