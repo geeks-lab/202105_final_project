@@ -59,9 +59,28 @@ public class BoardController {
 	}
 	
 	@GetMapping("detail")
-	public String boardDetail(String sugIdx, Model model) {
-		model.addAllAttributes(boardService.selectBoardDetail(sugIdx));
-		return "board/boardView";
+	public String boardDetail(String sugIdx, String userId ,Model model
+			,@SessionAttribute(name = "userInfo", required = false) User user) {
+		
+		if(user != null) {
+			String sessionUserId = user.getUserId();
+			
+			if(sessionUserId.equals("admin") || userId.equals(sessionUserId)) {
+				model.addAllAttributes(boardService.selectBoardDetail(sugIdx));
+				return "board/boardView";
+			}
+		} else {
+			model.addAttribute("msg","로그인 후 열람 가능합니다.");
+			model.addAttribute("url", "/board/list");
+			
+			return "common/result";
+		}
+		
+		model.addAttribute("msg","접근 권한이 없는 페이지입니다.");
+		model.addAttribute("url", "/board/list");
+		
+		return "common/result";
+
 	}
 	
 	@GetMapping("download")
@@ -79,6 +98,13 @@ public class BoardController {
 				.getPath(file.getFullPath(), file.getfReName()));
 		
 		return ResponseEntity.ok().headers(headers).body(resource);
+	}
+	
+	@GetMapping("delete")
+	public String deleteBoard(String sugIdx) {
+		boardService.deleteBoard(sugIdx);
+		
+		return "redirect:/board/list";
 	}
 	
 }

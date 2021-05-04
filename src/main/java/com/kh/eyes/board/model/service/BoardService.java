@@ -14,4 +14,7 @@ public interface BoardService {
 	void insertBoard(Board board, List<MultipartFile> files);
 	
 	Map<String,Object> selectBoardDetail(String sugIdx);
+	
+	void deleteBoard(String sugIdx);
+	
 }

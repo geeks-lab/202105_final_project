@@ -39,6 +39,7 @@
 	        </c:choose>
 			<li><a href="/teach/food">식음료 찾기</a></li>
 			<li><a href="/teach/product">생필품 찾기</a></li>
+			<li><a href="/ocr/document">문서 읽어주기</a></li>
 			<li><a href="/instead">목소리 되어주기</a></li>
 			<li><a href="/info">이용안내</a></li>
 			<li><a href="/board/list">고객의 소리함</a></li>

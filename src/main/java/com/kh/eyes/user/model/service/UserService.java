@@ -4,8 +4,8 @@ import com.kh.eyes.user.model.vo.User;
 
 public interface UserService {
 	
-	User selectMemberById(String userId);
-	int insertMember(User member);
-	User authenticateUser(User member);
+	User selectUserById(String userId);
+	int insertUser(User user);
+	User authenticateUser(User user);
 	
 }

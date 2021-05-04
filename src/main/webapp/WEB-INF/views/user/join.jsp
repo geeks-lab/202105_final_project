@@ -3,13 +3,10 @@
 <%@ include file="/WEB-INF/views/include/head.jsp" %>
 <head>
 	<title>회원가입</title>
-	<meta name="viewport" content="width=device-width,initial-scale=1, user-scalable=no">
-	<link rel="stylesheet" href="/resources/assets/css/main.css">
-	<link rel="stylesheet" href="/resources/assets/css/noscript.css">
-	<link rel="stylesheet" href="/resources/assets/css/fontawesome-all.min.css">
 	<link rel="stylesheet" href="/resources/css/join.css">
 </head>
-<body>
+<body class="is-preload">
+<div id="wrapper">
 	<!-- Header -->
 	<%@ include file="/WEB-INF/views/include/header.jsp" %>
 	
@@ -35,17 +32,17 @@
 
 						<div class="formPw formWrap">
 							<label class="label">비밀번호 </label>
-							<input class="input" type="password" name="password" id="pw" placeholder="비밀번호를 입력하세요." required/>
+							<input class="input" type="password" name="userPwd" id="pw" placeholder="비밀번호를 입력하세요." required/>
 						</div>
 						
 						<div class="formPwCheck formWrap">
 							<label class="label">비밀번호 확인 </label>
-							<input class="input" type="password" name="confirmPassword" id="confirmPassword" placeholder="비밀번호를 입력하세요." required/>
+							<input class="input" type="password" name="password" id="confirmPassword" placeholder="비밀번호를 입력하세요." required/>
 						</div>
 						
 						<div class="formName formWrap">
 							<label class="label">이름 </label>
-							<input class="input" type="text" name="name" placeholder="이름을 입력하세요." required/>
+							<input class="input" type="text" name="userName" placeholder="이름을 입력하세요." required/>
 						</div>
 			
 						<div class="submit">
@@ -55,11 +52,9 @@
 				</div>
 			</div>
 		</section>
-   
+   </div>
    <!-- js -->
 		<script type="text/javascript">
-		
-		
 		 let idCheckFlg = false;
 		   let idCheck = () => {
 			   //사용자가 입력한 아이디
@@ -86,13 +81,12 @@
 				   alert("아이디를 입력하지 않으셨습니다.");
 			   }
 		   } 
-		 
+		   
 	   </script>
 
 		<!-- Footer -->
 		<%@ include file="/WEB-INF/views/include/footer.jsp" %>
 	
-	
-<%@ include file="/WEB-INF/views/include/script.jsp" %>
+	<%@ include file="/WEB-INF/views/include/script.jsp" %>
 </body>
 </html>

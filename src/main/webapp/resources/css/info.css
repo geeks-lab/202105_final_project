@@ -1,18 +1,22 @@
 @charset "UTF-8";
 
-/* 헤더 패딩 안먹길래 걍 추가 */
-.info_inner {
-    width: 100%;
+.inner{
+	width: 100%;
     margin: 0 2em;
     padding: 0 2.5em;
+}
+
+.info_inner {
+    display:flex;
+    width: 100%;
     color: dimgrey;
 }
 
 .content_wrapper{
-	padding-left: 1em;
+	padding-left: 7em;
 }
 
-h1{
+/* h1{
 	font-size: 1.8em !important;
 	font-weight: 500 !important;	
 	margin: 0 0 0.5em 0 !important;
@@ -20,7 +24,7 @@ h1{
 h2{
 	font-size: 1.3em !important;
 	font-weight: 300 !important;
-}
+} */
 
 .individual{
 	display: inline-block;

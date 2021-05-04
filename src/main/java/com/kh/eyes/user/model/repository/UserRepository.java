@@ -11,17 +11,17 @@ import com.kh.eyes.user.model.vo.User;
 public interface UserRepository {
 	
 	@Select("select * from user_info where user_id = #{userId}")
-	User selectMemberById(String userId);
+	User selectUserById(String userId);
 	
 	@Select("select * from user_info where user_id = #{userId}")
-	User selectMemberForAuth(String userId);
+	User selectUserForAuth(String userId);
 	
 	@Select("select count(*) from user_info where user_name = #{userName}")
-	int selectMemberByUserName(String userName);
+	int selectUserByUserName(String userName);
 	
 	@Insert("insert into user_info(user_id,user_pwd,user_name)"
 			+ " values(#{userId},#{userPwd},#{userName})")
-	int insertMember(User member);
+	int insertUser(User user);
 	
 	//회원가입 
 	public void join(User user);

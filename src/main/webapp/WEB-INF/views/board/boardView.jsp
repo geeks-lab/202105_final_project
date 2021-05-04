@@ -18,6 +18,7 @@
 		pre{
           overflow: auto;
           white-space: pre-wrap;
+          font-family: 'Font Awesome 5 Free';
       	}
 	</style>
 </head>
@@ -40,10 +41,10 @@
 									<tbody>
 										<tr>
 											<td class="list">
-												<span>▶ 번호<br>${board.sugIdx}</span>
-												<span>▶ 제목<br>${board.sugTitle}</span>
-												<span>▶ 등록일<br>${board.sugRegDate}</span>
-												<span>▶ 작성자<br>${board.userId}</span>
+												<span>번호<br>${board.sugIdx}</span>
+												<span>제목<br>${board.sugTitle}</span>
+												<span>등록일<br>${board.sugRegDate}</span>
+												<span>작성자<br>${board.userId}</span>
 											</td>
 										</tr>
 										<tr style="height: 40vh">
@@ -68,7 +69,7 @@
 							<span>
 									<button class="button primary fit" style="background-color: #9370DB" onclick="submitData('list')"><span>목록</span></button>
 									<br><br>
-									<button class="button primary fit"><span>삭제</span></button>
+									<button class="button primary fit" onclick="deleteBoard('${board.sugIdx}')"><span>삭제</span></button>
 							</span>
 						</div>
 						<script type="text/javascript">
@@ -83,7 +84,10 @@
 							  
 						      location.href = '${context}' + "/board/download?" + urlEncodedForm(params);
 						   }
-						
+							
+						   function deleteBoard(sugIdx){
+							   location.href = '${context}' + "/board/delete?sugIdx=" + sugIdx;
+						   }
 						</script>
 					</div>
 					

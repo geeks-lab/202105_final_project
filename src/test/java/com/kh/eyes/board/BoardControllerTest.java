@@ -18,10 +18,7 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.web.context.WebApplicationContext;
 
 @WebAppConfiguration
-//Junit의 실행 방법을 지정
-//테스트 때 사용할 가상의 applicationContext를 생성하고 관리해준다.
 @RunWith(SpringJUnit4ClassRunner.class)
-//가상 applicationContext를 생성할 때 사용할 Spring bean 설정파일의 위치를 지정
 @ContextConfiguration(locations = {"file:src/main/webapp/WEB-INF/spring/**/*-context.xml"})
 
 public class BoardControllerTest {
