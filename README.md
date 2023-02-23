@@ -6,7 +6,7 @@
 #### Languages : Java 1.8, HTML5, CSS3, Java Script, Servlet
 #### Framework, Tools : Spring, JQuary, MyBatis, Bootstrap, Tomcat8.5
 #### ERD : 
-<img width="410" alt="image" src="https://user-images.githubusercontent.com/78070249/220853551-91d91e9c-74cc-4c6a-be79-e2c0fae3bc7b.png"><br/>
+<img width="900" alt="image" src="https://user-images.githubusercontent.com/78070249/220853551-91d91e9c-74cc-4c6a-be79-e2c0fae3bc7b.png"><br/>
 #### DBMS : Oracle SqlDeveloper
 
 ## 2. 프로젝트 설명 
