@@ -12,11 +12,11 @@
 ## 2. 프로젝트 설명 
 #### 이 애플리케이션은 어떤 서비스를 제공하나?
 눈이 불편한 유저를 위해 머신러닝, 문자인식, 음성인식 API를 사용하여 상품의 정보를 제공하는 기능과 말하기가 불편한 유저를 대신해 텍스트를 음성으로 바꿔 대신 말해주는 기능을 제공하는 서비스입니다.<br/>
-메인페이지<br/>
+* 메인페이지<br/>
 <img width="800" alt="image" src="https://user-images.githubusercontent.com/78070249/220861598-71c9fa96-41de-4a25-8ddc-3e4caa42fc2f.png"><br/>
-상품 정보 제공 페이지<br/>
+* 상품 정보 제공 페이지<br/>
 <img width="800" alt="image" src="https://user-images.githubusercontent.com/78070249/220861679-eb3eb70b-9d87-44d5-a3d7-767c2f364673.png"><br/>
-목소리 되어주기 페이지<br/>
+* 목소리 되어주기 페이지<br/>
 <img width="800" alt="image" src="https://user-images.githubusercontent.com/78070249/220861722-7da45a82-efeb-44e7-bd54-2b502731de24.png"><br/>
 
 #### 어떤 기술을 사용했고, 왜 그것을 선택했나?
