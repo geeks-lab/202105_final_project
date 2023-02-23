@@ -11,13 +11,13 @@
 
 ## 2. 프로젝트 설명 
 #### 이 애플리케이션은 어떤 서비스를 제공하나?
-눈이 불편한 유저를 위해 머신러닝, 문자인식, 음성인식 API를 사용하여 상품의 정보를 제공하는 기능을 중점으로 다루는 웹서비스 입니다. 말하기가 불편한 유저를 대신해 텍스트를 음성으로 바꿔 대신 말해주는 기능도 있습니다.
-<img width="500" alt="image" src="https://user-images.githubusercontent.com/78070249/220861598-71c9fa96-41de-4a25-8ddc-3e4caa42fc2f.png">
-<img width="500" alt="image" src="https://user-images.githubusercontent.com/78070249/220861679-eb3eb70b-9d87-44d5-a3d7-767c2f364673.png">
-<img width="500" alt="image" src="https://user-images.githubusercontent.com/78070249/220861722-7da45a82-efeb-44e7-bd54-2b502731de24.png">
+눈이 불편한 유저를 위해 머신러닝, 문자인식, 음성인식 API를 사용하여 상품의 정보를 제공하는 기능을 중점으로 다루는 웹서비스 입니다. 말하기가 불편한 유저를 대신해 텍스트를 음성으로 바꿔 대신 말해주는 기능도 있습니다.<br/>
+<img width="500" alt="image" src="https://user-images.githubusercontent.com/78070249/220861598-71c9fa96-41de-4a25-8ddc-3e4caa42fc2f.png"><br/>
+<img width="500" alt="image" src="https://user-images.githubusercontent.com/78070249/220861679-eb3eb70b-9d87-44d5-a3d7-767c2f364673.png"><br/>
+<img width="500" alt="image" src="https://user-images.githubusercontent.com/78070249/220861722-7da45a82-efeb-44e7-bd54-2b502731de24.png"><br/>
 
 #### 어떤 기술을 사용했고, 왜 그것을 선택했나?
-이미지 인식 기능을 빠르게 구현하기 위해 Google이 제공하는 Teachable machine API를 선택하였고 모델을 학습시켰습니다. 그러나 모든 제품을 학습시킬 수는 없었기에 Naver의 문자 인식 API인 CLOVA OCR을 붙여 문제점을 보완하였습니다. 이렇게 인식된 텍스트 데이터를 음성으로 읽어주는 기능은 MDN에서 제공하는 Web Speech API를 선택하여 간단하게 구현하였습니다.
+이미지 인식 기능을 빠르게 구현하기 위해 Google이 제공하는 Teachable machine API를 선택하였고 모델을 학습시켰습니다. 그러나 모든 제품을 학습시킬 수는 없었기에 Naver의 문자 인식 API인 CLOVA OCR을 붙여 부족한 기능을 보완하였습니다. 이렇게 인식된 텍스트 데이터를 음성으로 읽어주는 기능은 MDN에서 제공하는 Web Speech API를 선택하여 간단하게 구현하였습니다.
 
 ## 3. 당면했던 문제점들과 오류, 그리고 해결 방법
 
